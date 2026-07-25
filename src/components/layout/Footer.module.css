@@ -1,0 +1,74 @@
+.footer {
+  background: var(--bg-inverse);
+  color: var(--text-inverse);
+  border-top: 1px solid var(--border-hair);
+  margin-top: var(--sp-24);
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: var(--sp-12) var(--container-pad);
+  display: grid;
+  gap: var(--sp-8);
+}
+
+.brand .name {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  margin: 0;
+}
+
+.brand .tagline {
+  font-size: var(--fs-sm);
+  opacity: 0.7;
+  margin: var(--sp-1) 0 0;
+}
+
+.brand .legalNote {
+  font-size: var(--fs-xs);
+  opacity: 0.6;
+  margin-top: var(--sp-4);
+  max-width: 38ch;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.links a {
+  color: var(--text-inverse);
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  opacity: 0.8;
+}
+
+.links a:hover {
+  opacity: 1;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.contact a {
+  color: var(--text-inverse);
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  opacity: 0.8;
+}
+
+.contact a:hover {
+  opacity: 1;
+}
+
+@media (min-width: 720px) {
+  .inner {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}

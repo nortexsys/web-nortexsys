@@ -1,0 +1,259 @@
+/* === 1 · HERO ======================================================== */
+.hero {
+  padding-block: var(--sp-24);
+}
+
+.heroInner {
+  max-width: 56rem;
+}
+
+.heroImage {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heroImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* === Hero "full": full-bleed, image edge-to-edge ==================== */
+.heroFull {
+  background: var(--bg-inverse);
+  color: var(--text-inverse);
+  padding-block: 0;
+  padding-bottom: var(--sp-16);
+}
+
+.heroFullMedia {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.heroFullMedia img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.heroFull .heroCta {
+  margin-top: var(--sp-12);
+  padding-inline: var(--container-pad);
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+/* === Visually hidden (accessible to screen readers) ================= */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.eyebrow {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  margin-bottom: var(--sp-4);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-4xl);
+  line-height: 1.1;
+  color: var(--text-inverse);
+  margin-bottom: var(--sp-6);
+}
+
+.heroSubtext {
+  font-size: var(--fs-lg);
+  line-height: 1.6;
+  color: var(--text-inverse);
+  opacity: 0.85;
+  max-width: 60ch;
+}
+
+.heroCta {
+  margin-top: var(--sp-8);
+}
+
+/* === Shared block headers =========================================== */
+.blockHeader {
+  margin-bottom: var(--sp-12);
+  max-width: 60ch;
+}
+
+.blockHeader h2 {
+  margin-bottom: var(--sp-3);
+}
+
+.blockLead {
+  font-size: var(--fs-lg);
+  color: var(--text-muted);
+}
+
+.blockFooter {
+  margin-top: var(--sp-12);
+}
+
+/* === 2 · Services grid ============================================== */
+.serviceGrid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: 1fr;
+}
+
+.serviceId {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.serviceHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-4);
+}
+
+.serviceIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.serviceTitle {
+  font-size: var(--fs-lg);
+  margin: var(--sp-2) 0 var(--sp-2);
+}
+
+.serviceSummary {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* === 3 · 5D Method line ============================================= */
+.methodLine {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.methodStep {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hair);
+  border-radius: var(--radius);
+  padding: var(--sp-4) var(--sp-6);
+  min-width: 9rem;
+  flex: 1 1 9rem;
+}
+
+.methodCode {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.methodIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  color: var(--accent);
+  margin-bottom: var(--sp-2);
+}
+
+.methodName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-lg);
+  color: var(--text-primary);
+}
+
+/* === 4 · About split ================================================= */
+.aboutSplit {
+  display: grid;
+  gap: var(--sp-8);
+}
+
+.aboutBody {
+  font-size: var(--fs-lg);
+  line-height: 1.7;
+  margin-bottom: var(--sp-6);
+}
+
+/* === 5 · CTA final =================================================== */
+.ctaFinal {
+  padding-block: var(--sp-24);
+}
+
+.ctaInner {
+  text-align: center;
+  max-width: 48rem;
+}
+
+.ctaTitle {
+  color: var(--text-inverse);
+  margin-bottom: var(--sp-4);
+}
+
+.ctaBody {
+  color: var(--text-inverse);
+  opacity: 0.85;
+  font-size: var(--fs-lg);
+  margin: 0 auto var(--sp-8);
+  max-width: 48ch;
+}
+
+/* === Responsive ====================================================== */
+@media (min-width: 640px) {
+  .serviceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .aboutSplit {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
+}
+
+@media (min-width: 960px) {
+  .serviceGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

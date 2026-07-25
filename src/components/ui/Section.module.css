@@ -1,0 +1,16 @@
+.section {
+  padding-block: var(--sp-16);
+}
+
+.muted {
+  background: var(--bg-muted);
+}
+
+.inverse {
+  background: var(--bg-inverse);
+  color: var(--text-inverse);
+}
+
+.inverse :is(h1, h2, h3, h4) {
+  color: var(--text-inverse);
+}

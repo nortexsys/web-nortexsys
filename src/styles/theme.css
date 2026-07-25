@@ -1,0 +1,25 @@
+/*
+ * Nortex Systems — Semantic theme layer
+ * Maps raw brand tokens to role-based variables used by components.
+ * Dark/light variants driven by data-theme attribute where needed.
+ */
+:root {
+  /* Surfaces */
+  --bg-page: var(--brand-white);
+  --bg-surface: #ffffff;
+  --bg-muted: #eef0f3;
+  --bg-inverse: var(--brand-navy);
+
+  /* Text */
+  --text-primary: var(--brand-navy);
+  --text-body: #1f2733;
+  --text-muted: #5b6675;
+  --text-inverse: var(--brand-white);
+
+  /* Borders */
+  --border-hair: #d5dae0;
+  --border-strong: var(--brand-graphite);
+
+  /* Focus ring (accessibility) */
+  --focus-ring: 0 0 0 3px var(--accent-soft);
+}

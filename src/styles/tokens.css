@@ -1,0 +1,60 @@
+/*
+ * Nortex Systems — Design Tokens (raw brand layer)
+ * Source of truth: brief-tally-2026-07-23.csv + logo inspection.
+ * These values mirror the brand. Do NOT override at component level.
+ */
+:root {
+  /* === Brand palette (from brief, locked) ============================= */
+  --brand-navy: #0b1d33; /* Main Brand Colour  */
+  --brand-graphite: #2b3441; /* Secondary Brand   */
+  --brand-grey: #e1e4e8; /* Other 1 (lines)    */
+  --brand-white: #f6f7f8; /* Other 2 (surfaces) */
+
+  /* === Accent (complementary, PO-approved for CTAs/links) ============= */
+  --accent: #1d4ed8;
+  --accent-hover: #1e40af;
+  --accent-soft: #dbeafe;
+
+  /* === Typography families (next/font exposes --font-*) =============== */
+  --font-display: var(--font-spectral), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* === Type scale (1.250 — major third) ============================== */
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.563rem;
+  --fs-2xl: 1.953rem;
+  --fs-3xl: 2.441rem;
+  --fs-4xl: 3.052rem;
+
+  /* === Spacing scale (base 4px) ====================================== */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-24: 6rem;
+
+  /* === Radii ========================================================= */
+  --radius: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* === Shadows ======================================================= */
+  --shadow-sm: 0 1px 2px rgba(11, 29, 51, 0.06);
+  --shadow-md: 0 4px 16px rgba(11, 29, 51, 0.1);
+
+  /* === Layout ======================================================== */
+  --container-max: 1200px;
+  --container-pad: var(--sp-4);
+
+  /* === Motion ======================================================== */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 0.15s;
+}

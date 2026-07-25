@@ -92,8 +92,10 @@ CTA final: "¿No sabes por dónde empezar? Hablemos" → Contacto.
 Bloques:
 1. Introducción: "Nortex Systems es la marca comercial bajo la cual Fawalt Investment S.L. presta el servicio", con cobertura en España, Latam y Estados Unidos.
 2. Dos tarjetas/bloques, uno por sede:
-   - **España** — Fawalt Investment S.L., Calle Núñez de Balboa, 118, 1i, Madrid, 28006. Enlace a Google Maps.
-   - **Latam** — Fawalt Investment S.L., Calle Anastasio Ruiz, oficina E-9, corregimiento de Bella Vista, provincia de Panamá, República de Panamá. Enlace a Google Maps.
+   - **Estados Unidos** — Guillén Cepeda&Solís. 320 e yavapai Rd. apt 1205, 85705 Tucson (AZ). https://maps.app.goo.gl/sCq9FCwAq3H1gqmk8
+   - **España** — Fawalt Investment S.L., Calle Núñez de Balboa, 118, 1i, Madrid, 28006. https://maps.app.goo.gl/ugSGDjTwTCzPkd257
+   - **Latam** — Fawalt Investment S.L., Calle Anastasio Ruiz, oficina E-9, corregimiento de Bella Vista, provincia de Panamá, República de Panamá. https://maps.app.goo.gl/MELrUnaV8WRHgU9b8
+
 3. Datos de contacto generales: contact@nortexsys.com, teléfono +34 673 764 987.
 
 **Origen del contenido:** aportado por el cliente (aclaración del PO, 23/07/2026).

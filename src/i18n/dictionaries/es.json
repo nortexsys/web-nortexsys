@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "siteName": "Nortex Systems",
+    "tagline": "Software a medida · IA agéntica · Transformación digital"
+  },
+  "nav": {
+    "about": "Quiénes somos",
+    "method": "The Nortex 5D Method",
+    "services": "Servicios",
+    "location": "Dónde estamos",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "langSwitch": "EN"
+  },
+  "home": {
+    "hero": {
+      "headline": "Construimos software a medida partiendo de una definición clara del problema, no de suposiciones.",
+      "subtext": "Desde negocios que empiezan de cero su digitalización hasta productos digitales que necesitan escalar con inteligencia artificial agéntica, Nortex Systems convierte necesidades poco definidas en soluciones construidas con rigor, procesos claros y resultados medibles.",
+      "cta": "Habla con nosotros"
+    },
+    "servicesSummary": {
+      "title": "Qué hacemos",
+      "subtitle": "Del dato a la venta: un ciclo completo de digitalización, integración e inteligencia aplicada al negocio.",
+      "seeAll": "Ver todos los servicios"
+    },
+    "methodSummary": {
+      "title": "Cómo trabajamos",
+      "subtitle": "El Nortex 5D Method: un ciclo disciplinado de mejora continua.",
+      "seeMethod": "Ver la metodología"
+    },
+    "aboutSummary": {
+      "title": "Quiénes somos",
+      "body": "Somos una firma de desarrollo de software y consultoría tecnológica especializada en software a medida, IA agéntica y transformación digital. No entregamos únicamente código: traducimos necesidades de negocio, muchas veces poco definidas, en especificaciones claras, y de ahí construimos soluciones medibles.",
+      "seeAbout": "Conócenos"
+    },
+    "ctaFinal": {
+      "title": "¿Tienes un proyecto en mente?",
+      "body": "Cuéntanos qué necesitas. Te ayudamos a definirlo con claridad antes de construirlo.",
+      "button": "Habla con nosotros"
+    }
+  },
+  "about": {
+    "metaTitle": "Quiénes somos",
+    "metaDescription": "Somos una firma de desarrollo de software y consultoría tecnológica. Software a medida, IA agéntica y transformación digital con rigor y procesos claros.",
+    "intro": {
+      "title": "Quiénes somos",
+      "lead": "No entregamos únicamente código: traducimos necesidades de negocio, muchas veces poco definidas, en especificaciones claras, y de ahí construimos soluciones medibles.",
+      "body": "Nortex Systems es una firma de desarrollo de software y consultoría tecnológica especializada en software a medida, IA agéntica y transformación digital. Trabajamos con negocios tradicionales que inician su digitalización y con plataformas complejas que necesitan escalar con inteligencia artificial, aplicando siempre el mismo nivel de rigor de ingeniería."
+    },
+    "mission": {
+      "title": "Misión",
+      "body": "Ayudamos a las empresas a aplicar las tecnologías de software a sus negocios para que mejoren su eficiencia operativa, reduzcan costes y mejoren la atención a sus clientes."
+    },
+    "values": {
+      "title": "Valores",
+      "subtitle": "Lo que nos define.",
+      "items": [
+        { "name": "Claridad", "body": "Hacemos que lo complejo sea comprensible." },
+        { "name": "Integridad", "body": "Hacemos lo correcto, siempre." },
+        { "name": "Precisión", "body": "Cuidamos cada detalle." },
+        { "name": "Alianza", "body": "El éxito se construye junto al cliente." }
+      ]
+    },
+    "audience": {
+      "title": "A quién servimos",
+      "body": "Pequeñas y medianas empresas en cualquier estadio de digitalización, en España, Latam y Estados Unidos. Desde negocios que digitalizan desde cero hasta plataformas que ya escalan y buscan incorporar IA agéntica.",
+      "lead": "¿Tienes un proyecto en mente?",
+      "cta": "Habla con nosotros"
+    }
+  },
+  "services": {
+    "list": [
+      { "id": "01", "icon": "web", "title": "Digitalización y presencia web", "summary": "Para negocios que parten de cero digital." },
+      { "id": "02", "icon": "code", "title": "Software a medida", "summary": "Para procesos específicos que no encajan en soluciones genéricas." },
+      { "id": "03", "icon": "layers", "title": "Plataformas y productos digitales", "summary": "Para productos propios o SaaS que necesitan arquitectura sólida." },
+      { "id": "04", "icon": "agent", "title": "IA agéntica y automatización", "summary": "Para que el software tome decisiones y ejecute tareas." },
+      { "id": "05", "icon": "shield", "title": "Soluciones para sectores regulados", "summary": "Para software que debe convivir con normativa compleja." },
+      { "id": "06", "icon": "plug", "title": "Integración con proveedores y clientes", "summary": "Para operaciones que dependen de coordinarse con terceros." },
+      { "id": "07", "icon": "catalog", "title": "Digitalización de catálogos", "summary": "Para productos no representados digitalmente de forma estructurada." },
+      { "id": "08", "icon": "sales", "title": "IA para incremento de ventas", "summary": "Para que la tecnología no solo informe, sino que venda." },
+      { "id": "09", "icon": "legacy", "title": "Inteligencia a partir de datos legacy", "summary": "Para empresas con años de datos sin explotar." }
+    ]
+  },
+  "contactPage": {
+    "metaTitle": "Contacto",
+    "metaDescription": "Cuéntanos qué necesitas. Te ayudamos a definirlo con claridad antes de construirlo.",
+    "title": "Hablemos",
+    "lead": "Cuéntanos qué necesitas. Te ayudamos a definirlo con claridad antes de construirlo.",
+    "directTitle": "O escríbenos directamente",
+    "form": {
+      "name": "Nombre",
+      "nameHint": "Tu nombre completo.",
+      "email": "Email",
+      "emailHint": "Donde te responderemos.",
+      "phone": "Teléfono",
+      "phoneHint": "Opcional.",
+      "company": "Empresa",
+      "companyHint": "Opcional.",
+      "message": "Mensaje",
+      "messageHint": "Cuéntanos brevemente tu proyecto o necesidad.",
+      "required": "obligatorio",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando…",
+      "successTitle": "¡Mensaje enviado!",
+      "successBody": "Gracias. Hemos recibido tu mensaje y te responderemos por email lo antes posible.",
+      "errorTitle": "No se pudo enviar el mensaje",
+      "errorBody": "Ha ocurrido un error. Inténtalo de nuevo en unos minutos o escríbenos directamente a contact@nortexsys.com.",
+      "validationRequired": "Este campo es obligatorio.",
+      "validationEmail": "Introduce un email válido.",
+      "errorMessage": "Deja el campo oculto vacío.",
+      "companyFieldLabel": "No rellenar"
+    }
+  },
+  "blogPage": {
+    "metaTitle": "Blog",
+    "title": "Blog",
+    "lead": "Pronto publicaremos",
+    "body": "Estamos preparando contenidos sobre software a medida, IA agéntica y transformación digital. Vuelve pronto.",
+    "cta": "Mientras tanto, cuéntanos tu proyecto"
+  },
+  "servicesPage": {
+    "metaTitle": "Servicios",
+    "metaDescription": "Del dato a la venta: un ciclo completo de digitalización, integración e inteligencia aplicada al negocio. Los 9 bloques de servicios de Nortex.",
+    "title": "Servicios",
+    "lead": "Del dato a la venta: un ciclo completo de digitalización, integración e inteligencia aplicada al negocio.",
+    "navLabel": "Ir al servicio",
+    "ctaTitle": "¿No sabes por dónde empezar?",
+    "ctaBody": "Hablemos. Te ayudamos a definir con claridad qué necesitas antes de construirlo.",
+    "ctaButton": "Habla con nosotros",
+    "blocks": [
+      {
+        "id": "01",
+        "title": "Digitalización y presencia web",
+        "target": "Para negocios que parten de cero digital.",
+        "items": [
+          "Diseño y desarrollo de sitios web corporativos",
+          "Presencia digital básica: dominio, email profesional, Google Business",
+          "Migración de procesos manuales a digitales"
+        ]
+      },
+      {
+        "id": "02",
+        "title": "Software a medida",
+        "target": "Para negocios con procesos específicos que no encajan en soluciones genéricas.",
+        "items": [
+          "Aplicaciones y plataformas a medida (web/desktop)",
+          "Sistemas de gestión interna (CRM, ERP ligero, portales de cliente)",
+          "Integraciones entre herramientas existentes (APIs, automatización de flujos)"
+        ]
+      },
+      {
+        "id": "03",
+        "title": "Plataformas y productos digitales",
+        "target": "Para proyectos que nacen como producto propio o SaaS y necesitan arquitectura sólida desde el inicio.",
+        "items": [
+          "Diseño y desarrollo de plataformas escalables",
+          "Arquitectura de producto y definición de MVP",
+          "Desarrollo full-stack orientado a crecimiento y mantenibilidad"
+        ]
+      },
+      {
+        "id": "04",
+        "title": "IA agéntica y automatización",
+        "target": "Para negocios que quieren que el software tome decisiones y ejecute tareas.",
+        "items": [
+          "Agentes de IA para atención al cliente y cualificación de leads",
+          "Automatización de procesos administrativos y operativos",
+          "Integración de IA en productos y plataformas existentes"
+        ]
+      },
+      {
+        "id": "05",
+        "title": "Soluciones para sectores regulados",
+        "target": "Para proyectos donde el software debe convivir con normativa compleja.",
+        "items": [
+          "Portales y herramientas para relación con administraciones públicas",
+          "Digitalización de procesos con requisitos legales y fiscales",
+          "Experiencia en el ecosistema de autónomos y pymes españolas"
+        ]
+      },
+      {
+        "id": "06",
+        "title": "Integración con proveedores y clientes",
+        "target": "Para negocios cuya operación depende de coordinarse con terceros, no solo de tener un sistema aislado.",
+        "items": [
+          "Conexión de sistemas propios con plataformas de proveedores (pedidos, stock, precios en tiempo real)",
+          "Portales de cliente: seguimiento de pedidos, facturación, comunicación centralizada",
+          "Automatización de intercambio de datos entre empresas (APIs, EDI, webhooks) para eliminar procesos manuales por email o Excel"
+        ]
+      },
+      {
+        "id": "07",
+        "title": "Digitalización de catálogos",
+        "target": "Para negocios cuyo producto — físico o de servicio — no está representado digitalmente de forma estructurada.",
+        "items": [
+          "Estructuración de catálogos de producto (fichas, categorías, atributos, precios) listos para web, e-commerce o marketplaces",
+          "Digitalización desde fuentes no estructuradas (Excel, PDF, papel, fotos) a bases de datos limpias y consultables",
+          "Integración del catálogo con motores de búsqueda internos, filtros y IA de recomendación"
+        ]
+      },
+      {
+        "id": "08",
+        "title": "IA para incremento de ventas",
+        "target": "Para negocios que quieren que la tecnología no solo informe, sino que venda.",
+        "items": [
+          "Agentes de IA para cualificación y seguimiento de leads",
+          "Recomendación de producto y personalización basada en comportamiento del cliente",
+          "Chatbots de conversión orientados a cerrar venta o agendar cita",
+          "Analítica predictiva: qué productos y clientes tienen más probabilidad de compra"
+        ]
+      },
+      {
+        "id": "09",
+        "title": "Inteligencia a partir de datos legacy",
+        "target": "Para empresas que llevan años acumulando datos sin saber lo que realmente tienen.",
+        "intro": "Toda empresa que lleva más de unos años operando tiene un secreto: un ERP viejo, una base de datos que nadie se atreve a tocar, hojas de Excel heredadas de persona en persona, sistemas que ya no entiende ni quien los programó. Ahí dentro no hay basura. Hay historia. Hay patrones de compra que nadie ha mirado en años, clientes que dejaron de comprar sin que nadie preguntara por qué, márgenes que varían por motivos que hoy nadie sabría explicar.",
+        "intro2": "El problema nunca ha sido la falta de datos, sino la falta de tiempo, herramientas y criterio para convertirlos en información útil. Hoy la inteligencia artificial puede entrar en ese caos — estructurado o no, en la base de datos que sea — limpiarlo, organizarlo, y encontrar lo que la empresa ni sabía que tenía guardado en un cajón.",
+        "items": [
+          "Auditoría y limpieza de datos en sistemas legacy, sea cual sea la base de datos o el formato de origen",
+          "Estructuración de información dispersa o no estructurada (tablas sueltas, documentos, hojas de cálculo, sistemas sin documentar)",
+          "Extracción de insights con IA: patrones ocultos, oportunidades de negocio, riesgos no detectados",
+          "Informes ejecutivos que traducen hallazgos técnicos en decisiones de negocio accionables"
+        ]
+      }
+    ]
+  },
+  "method": {
+    "phases": [
+      { "code": "D1", "name": "Discover", "subtitle": "Baseline Audit" },
+      { "code": "D2", "name": "Define", "subtitle": "Functional Analysis" },
+      { "code": "D3", "name": "Design", "subtitle": "Spec & Roadmap" },
+      { "code": "D4", "name": "Deliver", "subtitle": "Build & Implement" },
+      { "code": "D5", "name": "Demonstrate", "subtitle": "Compare & Prove ROI" }
+    ]
+  },
+  "methodPage": {
+    "metaTitle": "The Nortex 5D Method",
+    "metaDescription": "El método propietario de Nortex: un ciclo disciplinado de mejora continua — Discover, Define, Design, Deliver, Demonstrate.",
+    "intro": {
+      "title": "The Nortex 5D Method",
+      "lead": "En Nortex, cada transformación digital es guiada por nuestro método estructurado de las 5D. Cada fase es una oportunidad para alinear objetivos, maximizar resultados y asegurar que la ingeniería impulse la transformación.",
+      "cycleNote": "Ciclo de mejora continua: Discover → Define → Design → Deliver → Demonstrate → (vuelta a Discover)"
+    },
+    "deliverablesLabel": "Entregables",
+    "detail": [
+      {
+        "code": "D1",
+        "name": "Discover",
+        "tagline": "Comprender antes de construir",
+        "body": "Todo proyecto de software exitoso empieza por entender el ecosistema del negocio. Evaluamos sistemas existentes, procesos operativos, restricciones técnicas, stakeholders y objetivos estratégicos para establecer una línea base de ingeniería clara.",
+        "deliverables": [
+          "Business discovery",
+          "Evaluación de sistemas",
+          "Auditoría técnica",
+          "Workshops con stakeholders",
+          "Mapeo de oportunidades"
+        ]
+      },
+      {
+        "code": "D2",
+        "name": "Define",
+        "tagline": "Traducir necesidades de negocio en requisitos de ingeniería",
+        "body": "Las ideas se convierten en especificaciones. Los requisitos se documentan, priorizan, validan y transforman en una hoja de ruta que alinea los objetivos de negocio con la viabilidad técnica.",
+        "deliverables": [
+          "Análisis funcional",
+          "Requisitos técnicos",
+          "Flujos de usuario",
+          "Backlog priorizado",
+          "Métricas de éxito"
+        ]
+      },
+      {
+        "code": "D3",
+        "name": "Design",
+        "tagline": "Arquitectura robusta y escalable",
+        "body": "En lugar de saltar directamente al desarrollo, diseñamos los sistemas de forma intencional. La arquitectura, las integraciones, la seguridad y los flujos de IA se definen antes de implementar.",
+        "deliverables": [
+          "Arquitectura de la solución",
+          "Especificaciones técnicas",
+          "Estrategia de APIs",
+          "Diseño de IA agéntica",
+          "Blueprint de infraestructura",
+          "Hoja de ruta de entrega"
+        ]
+      },
+      {
+        "code": "D4",
+        "name": "Deliver",
+        "tagline": "Ingeniería con disciplina",
+        "body": "La implementación sigue las especificaciones establecidas, aplicando prácticas de ingeniería modernas, validación continua y comunicación transparente. El software se construye para seguir siendo mantenible mucho después del despliegue.",
+        "deliverables": [
+          "Desarrollo de software",
+          "Implementación de IA",
+          "Despliegue en la nube",
+          "QA y testing",
+          "Documentación",
+          "Puesta en producción"
+        ]
+      },
+      {
+        "code": "D5",
+        "name": "Demonstrate",
+        "tagline": "La tecnología nunca está terminada",
+        "body": "Una vez el software está en producción, medir se convierte en la siguiente fase de la ingeniería. El rendimiento, la adopción, las oportunidades de automatización y las nuevas necesidades de negocio alimentan la siguiente iteración de mejora.",
+        "deliverables": [
+          "Monitorización de rendimiento",
+          "Medición de ROI",
+          "Optimización continua",
+          "Refinamiento de IA",
+          "Evolución del producto",
+          "Hoja de ruta estratégica"
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Por qué importa este framework",
+      "body": "Muchas firmas se enfocan en entregar software. Nortex se enfoca en construir sistemas. Nuestra metodología garantiza que cada proyecto siga una progresión disciplinada — desde comprender el contexto de negocio hasta diseñar arquitecturas resilientes, implementar con precisión y mejorar continuamente en base a resultados medibles. El resultado es software que no solo funciona el primer día, sino que es adaptable, mantenible y está alineado con los objetivos de negocio a largo plazo.",
+      "cta": "Hablemos de tu proyecto"
+    }
+  },
+  "footer": {
+    "legalNote": "Nortex Systems es la marca comercial bajo la cual Fawalt Investment S.L. presta el servicio.",
+    "legal": "Aviso legal",
+    "privacy": "Privacidad",
+    "cookies": "Cookies",
+    "email": "contact@nortexsys.com",
+    "phone": "+34 673 764 987"
+  }
+}

@@ -1,0 +1,93 @@
+/* === Page intro ===================================================== */
+.intro {
+  padding-block: var(--sp-16) var(--sp-12);
+}
+
+.intro h1 {
+  margin-bottom: var(--sp-4);
+}
+
+.lead {
+  font-size: var(--fs-xl);
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+  max-width: 30ch;
+  margin-bottom: var(--sp-6);
+}
+
+.introBody {
+  font-size: var(--fs-lg);
+  line-height: 1.7;
+  color: var(--text-body);
+}
+
+/* === Mission ======================================================== */
+.missionBody {
+  font-size: var(--fs-xl);
+  line-height: 1.5;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-weight: 600;
+  max-width: 40ch;
+}
+
+/* === Values grid ==================================================== */
+.values {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: 1fr;
+}
+
+.valueItem {
+  height: 100%;
+}
+
+.valueCard {
+  height: 100%;
+}
+
+.values li h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--sp-1);
+}
+
+.values li p {
+  font-size: var(--fs-base);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* === Audience band ================================================== */
+.audienceBody {
+  font-size: var(--fs-lg);
+  line-height: 1.7;
+  color: var(--text-inverse);
+  opacity: 0.92;
+  max-width: 60ch;
+  margin-bottom: var(--sp-6);
+}
+
+.audienceLead {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  color: #fff;
+  margin-bottom: var(--sp-2);
+}
+
+/* === Responsive ===================================================== */
+@media (min-width: 640px) {
+  .values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .values {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

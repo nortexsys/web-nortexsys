@@ -1,0 +1,22 @@
+# dependencies
+/node_modules
+
+# next
+/.next/
+/out/
+next-env.d.ts
+
+# build
+*.tsbuildinfo
+
+# work / scratch (never committed)
+/_work
+/_source
+
+# os
+.DS_Store
+Thumbs.db
+
+# env
+.env*
+!.env.example

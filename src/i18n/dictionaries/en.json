@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "siteName": "Nortex Systems",
+    "tagline": "Custom software · Agentic AI · Digital transformation"
+  },
+  "nav": {
+    "about": "About us",
+    "method": "The Nortex 5D Method",
+    "services": "Services",
+    "location": "Where we are",
+    "blog": "Blog",
+    "contact": "Contact",
+    "langSwitch": "ES"
+  },
+  "home": {
+    "hero": {
+      "headline": "We build custom software starting from a clear definition of the problem, not from assumptions.",
+      "subtext": "From businesses starting their digitalization from scratch to digital products that need to scale with agentic artificial intelligence, Nortex Systems turns poorly defined needs into solutions built with rigor, clear processes and measurable results.",
+      "cta": "Talk to us"
+    },
+    "servicesSummary": {
+      "title": "What we do",
+      "subtitle": "From data to sale: a complete cycle of digitalization, integration and intelligence applied to the business.",
+      "seeAll": "See all services"
+    },
+    "methodSummary": {
+      "title": "How we work",
+      "subtitle": "The Nortex 5D Method: a disciplined cycle of continuous improvement.",
+      "seeMethod": "See the methodology"
+    },
+    "aboutSummary": {
+      "title": "Who we are",
+      "body": "We are a software development and technology consulting firm specialized in custom software, agentic AI and digital transformation. We don't just deliver code: we translate business needs — often poorly defined — into clear specifications, and from there we build measurable solutions.",
+      "seeAbout": "Meet us"
+    },
+    "ctaFinal": {
+      "title": "Got a project in mind?",
+      "body": "Tell us what you need. We help you define it clearly before building it.",
+      "button": "Talk to us"
+    }
+  },
+  "about": {
+    "metaTitle": "Who we are",
+    "metaDescription": "A software development and technology consulting firm. Custom software, agentic AI and digital transformation with rigor and clear processes.",
+    "intro": {
+      "title": "Who we are",
+      "lead": "We don't just deliver code: we translate business needs — often poorly defined — into clear specifications, and from there we build measurable solutions.",
+      "body": "Nortex Systems is a software development and technology consulting firm specialized in custom software, agentic AI and digital transformation. We work with traditional businesses starting their digitalization and with complex platforms that need to scale with artificial intelligence, always applying the same level of engineering rigor."
+    },
+    "mission": {
+      "title": "Mission",
+      "body": "We help companies apply software technologies to their businesses so they improve operational efficiency, reduce costs and improve customer service."
+    },
+    "values": {
+      "title": "Values",
+      "subtitle": "What defines us.",
+      "items": [
+        { "name": "Clarity", "body": "We make the complex understandable." },
+        { "name": "Integrity", "body": "We do the right thing, always." },
+        { "name": "Precision", "body": "We take care of every detail." },
+        { "name": "Alliance", "body": "Success is built alongside the client." }
+      ]
+    },
+    "audience": {
+      "title": "Who we serve",
+      "body": "Small and medium-sized businesses at any stage of digitalization, in Spain, Latin America and the United States. From businesses digitalizing from scratch to platforms that already scale and look to incorporate agentic AI.",
+      "lead": "Got a project in mind?",
+      "cta": "Talk to us"
+    }
+  },
+  "services": {
+    "list": [
+      { "id": "01", "icon": "web", "title": "Digitalization and web presence", "summary": "For businesses starting from zero." },
+      { "id": "02", "icon": "code", "title": "Custom software", "summary": "For specific processes that don't fit generic solutions." },
+      { "id": "03", "icon": "layers", "title": "Platforms and digital products", "summary": "For own products or SaaS needing solid architecture." },
+      { "id": "04", "icon": "agent", "title": "Agentic AI and automation", "summary": "For software to make decisions and execute tasks." },
+      { "id": "05", "icon": "shield", "title": "Solutions for regulated sectors", "summary": "For software that must coexist with complex regulation." },
+      { "id": "06", "icon": "plug", "title": "Integration with suppliers and clients", "summary": "For operations depending on coordinating with third parties." },
+      { "id": "07", "icon": "catalog", "title": "Catalog digitalization", "summary": "For products not digitally represented in a structured way." },
+      { "id": "08", "icon": "sales", "title": "AI for sales growth", "summary": "For technology that doesn't just inform, but sells." },
+      { "id": "09", "icon": "legacy", "title": "Intelligence from legacy data", "summary": "For companies with years of untapped data." }
+    ]
+  },
+  "contactPage": {
+    "metaTitle": "Contact",
+    "metaDescription": "Tell us what you need. We help you define it clearly before building it.",
+    "title": "Let's talk",
+    "lead": "Tell us what you need. We help you define it clearly before building it.",
+    "directTitle": "Or write to us directly",
+    "form": {
+      "name": "Name",
+      "nameHint": "Your full name.",
+      "email": "Email",
+      "emailHint": "Where we will reply.",
+      "phone": "Phone",
+      "phoneHint": "Optional.",
+      "company": "Company",
+      "companyHint": "Optional.",
+      "message": "Message",
+      "messageHint": "Briefly tell us about your project or need.",
+      "required": "required",
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "successTitle": "Message sent!",
+      "successBody": "Thank you. We have received your message and will reply by email as soon as possible.",
+      "errorTitle": "Couldn't send the message",
+      "errorBody": "An error occurred. Please try again in a few minutes or write to us directly at contact@nortexsys.com.",
+      "validationRequired": "This field is required.",
+      "validationEmail": "Enter a valid email.",
+      "errorMessage": "Leave the hidden field empty.",
+      "companyFieldLabel": "Do not fill"
+    }
+  },
+  "blogPage": {
+    "metaTitle": "Blog",
+    "title": "Blog",
+    "lead": "Coming soon",
+    "body": "We are preparing content on custom software, agentic AI and digital transformation. Check back soon.",
+    "cta": "In the meantime, tell us about your project"
+  },
+  "servicesPage": {
+    "metaTitle": "Services",
+    "metaDescription": "From data to sale: a complete cycle of digitalization, integration and intelligence applied to the business. Nortex's 9 service blocks.",
+    "title": "Services",
+    "lead": "From data to sale: a complete cycle of digitalization, integration and intelligence applied to the business.",
+    "navLabel": "Go to service",
+    "ctaTitle": "Don't know where to start?",
+    "ctaBody": "Let's talk. We help you define clearly what you need before building it.",
+    "ctaButton": "Talk to us",
+    "blocks": [
+      {
+        "id": "01",
+        "title": "Digitalization and web presence",
+        "target": "For businesses starting from zero.",
+        "items": [
+          "Design and development of corporate websites",
+          "Basic digital presence: domain, professional email, Google Business",
+          "Migration of manual processes to digital"
+        ]
+      },
+      {
+        "id": "02",
+        "title": "Custom software",
+        "target": "For businesses with specific processes that don't fit generic solutions.",
+        "items": [
+          "Bespoke applications and platforms (web/desktop)",
+          "Internal management systems (CRM, lightweight ERP, client portals)",
+          "Integrations between existing tools (APIs, workflow automation)"
+        ]
+      },
+      {
+        "id": "03",
+        "title": "Platforms and digital products",
+        "target": "For projects born as their own product or SaaS that need solid architecture from the start.",
+        "items": [
+          "Design and development of scalable platforms",
+          "Product architecture and MVP definition",
+          "Full-stack development oriented to growth and maintainability"
+        ]
+      },
+      {
+        "id": "04",
+        "title": "Agentic AI and automation",
+        "target": "For businesses that want software to make decisions and execute tasks.",
+        "items": [
+          "AI agents for customer service and lead qualification",
+          "Automation of administrative and operational processes",
+          "Integration of AI into existing products and platforms"
+        ]
+      },
+      {
+        "id": "05",
+        "title": "Solutions for regulated sectors",
+        "target": "For projects where the software must coexist with complex regulation.",
+        "items": [
+          "Portals and tools for interaction with public administrations",
+          "Digitalization of processes with legal and fiscal requirements",
+          "Experience in the Spanish freelancer and SME ecosystem"
+        ]
+      },
+      {
+        "id": "06",
+        "title": "Integration with suppliers and clients",
+        "target": "For businesses whose operation depends on coordinating with third parties, not just having an isolated system.",
+        "items": [
+          "Connection of in-house systems with supplier platforms (orders, stock, real-time prices)",
+          "Client portals: order tracking, billing, centralized communication",
+          "Automation of data exchange between companies (APIs, EDI, webhooks) to eliminate manual processes by email or Excel"
+        ]
+      },
+      {
+        "id": "07",
+        "title": "Catalog digitalization",
+        "target": "For businesses whose product — physical or service-based — is not digitally represented in a structured way.",
+        "items": [
+          "Structuring of product catalogs (datasheets, categories, attributes, prices) ready for web, e-commerce or marketplaces",
+          "Digitalization from unstructured sources (Excel, PDF, paper, photos) into clean and queryable databases",
+          "Integration of the catalog with internal search engines, filters and recommendation AI"
+        ]
+      },
+      {
+        "id": "08",
+        "title": "AI for sales growth",
+        "target": "For businesses that want technology not just to inform, but to sell.",
+        "items": [
+          "AI agents for lead qualification and follow-up",
+          "Product recommendation and personalization based on customer behavior",
+          "Conversion chatbots oriented to closing sales or scheduling appointments",
+          "Predictive analytics: which products and customers are most likely to buy"
+        ]
+      },
+      {
+        "id": "09",
+        "title": "Intelligence from legacy data",
+        "target": "For companies that have been accumulating data for years without knowing what they really have.",
+        "intro": "Every company that has been operating for more than a few years has a secret: an old ERP, a database nobody dares to touch, spreadsheets handed down from person to person, systems that no longer even the person who programmed them understands. There is no garbage in there. There is history. There are purchasing patterns that nobody has looked at in years, customers who stopped buying without anyone asking why, margins that vary for reasons that today nobody could explain.",
+        "intro2": "The problem has never been the lack of data, but the lack of time, tools and criteria to turn it into useful information. Today, artificial intelligence can enter that chaos — structured or not, in whatever database — clean it, organize it, and find what the company didn't even know it had stored in a drawer.",
+        "items": [
+          "Audit and cleaning of data in legacy systems, whatever the database or source format",
+          "Structuring of dispersed or unstructured information (loose tables, documents, spreadsheets, undocumented systems)",
+          "Extraction of insights with AI: hidden patterns, business opportunities, undetected risks",
+          "Executive reports that translate technical findings into actionable business decisions"
+        ]
+      }
+    ]
+  },
+  "method": {
+    "phases": [
+      { "code": "D1", "name": "Discover", "subtitle": "Baseline Audit" },
+      { "code": "D2", "name": "Define", "subtitle": "Functional Analysis" },
+      { "code": "D3", "name": "Design", "subtitle": "Spec & Roadmap" },
+      { "code": "D4", "name": "Deliver", "subtitle": "Build & Implement" },
+      { "code": "D5", "name": "Demonstrate", "subtitle": "Compare & Prove ROI" }
+    ]
+  },
+  "methodPage": {
+    "metaTitle": "The Nortex 5D Method",
+    "metaDescription": "Nortex's proprietary method: a disciplined cycle of continuous improvement — Discover, Define, Design, Deliver, Demonstrate.",
+    "intro": {
+      "title": "The Nortex 5D Method",
+      "lead": "At Nortex, every digital transformation is guided by our structured 5D method. Each phase is an opportunity to align objectives, maximize results and ensure that engineering drives the transformation.",
+      "cycleNote": "Continuous improvement cycle: Discover → Define → Design → Deliver → Demonstrate → (back to Discover)"
+    },
+    "deliverablesLabel": "Deliverables",
+    "detail": [
+      {
+        "code": "D1",
+        "name": "Discover",
+        "tagline": "Understand before building",
+        "body": "Every successful software project starts by understanding the business ecosystem. We assess existing systems, operational processes, technical constraints, stakeholders and strategic objectives to establish a clear engineering baseline.",
+        "deliverables": [
+          "Business discovery",
+          "Systems assessment",
+          "Technical audit",
+          "Stakeholder workshops",
+          "Opportunity mapping"
+        ]
+      },
+      {
+        "code": "D2",
+        "name": "Define",
+        "tagline": "Translate business needs into engineering requirements",
+        "body": "Ideas become specifications. Requirements are documented, prioritized, validated and transformed into a roadmap that aligns business objectives with technical feasibility.",
+        "deliverables": [
+          "Functional analysis",
+          "Technical requirements",
+          "User flows",
+          "Prioritized backlog",
+          "Success metrics"
+        ]
+      },
+      {
+        "code": "D3",
+        "name": "Design",
+        "tagline": "Robust and scalable architecture",
+        "body": "Instead of jumping straight into development, we design systems intentionally. Architecture, integrations, security and AI flows are defined before implementation.",
+        "deliverables": [
+          "Solution architecture",
+          "Technical specifications",
+          "API strategy",
+          "Agentic AI design",
+          "Infrastructure blueprint",
+          "Delivery roadmap"
+        ]
+      },
+      {
+        "code": "D4",
+        "name": "Deliver",
+        "tagline": "Engineering with discipline",
+        "body": "Implementation follows the established specifications, applying modern engineering practices, continuous validation and transparent communication. Software is built to remain maintainable long after deployment.",
+        "deliverables": [
+          "Software development",
+          "AI implementation",
+          "Cloud deployment",
+          "QA and testing",
+          "Documentation",
+          "Go-live"
+        ]
+      },
+      {
+        "code": "D5",
+        "name": "Demonstrate",
+        "tagline": "Technology is never finished",
+        "body": "Once the software is in production, measurement becomes the next phase of engineering. Performance, adoption, automation opportunities and new business needs feed the next iteration of improvement.",
+        "deliverables": [
+          "Performance monitoring",
+          "ROI measurement",
+          "Continuous optimization",
+          "AI refinement",
+          "Product evolution",
+          "Strategic roadmap"
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Why this framework matters",
+      "body": "Many firms focus on delivering software. Nortex focuses on building systems. Our methodology ensures that every project follows a disciplined progression — from understanding the business context to designing resilient architectures, implementing with precision and continuously improving based on measurable results. The result is software that not only works on day one, but is adaptable, maintainable and aligned with long-term business objectives.",
+      "cta": "Let's talk about your project"
+    }
+  },
+  "footer": {
+    "legalNote": "Nortex Systems is the trading name under which Fawalt Investment S.L. provides the service.",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "email": "contact@nortexsys.com",
+    "phone": "+34 673 764 987"
+  }
+}
