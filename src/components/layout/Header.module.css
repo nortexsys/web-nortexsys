@@ -114,9 +114,13 @@
 
 /* === Mobile nav panel =============================================== */
 .mobileNav {
-  display: block;
+  display: none;
   background: var(--bg-inverse);
   border-top: 1px solid var(--border-hair);
+}
+
+.mobileNavOpen {
+  display: block;
 }
 
 .mobileNavList {
