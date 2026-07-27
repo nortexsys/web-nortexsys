@@ -27,6 +27,15 @@ export function Footer({
           <Link href={`/${lang}/contacto`}>{dict.nav.contact}</Link>
         </nav>
 
+        <nav className={styles.links} aria-label={dict.footer.legalSectionTitle}>
+          <p className={styles.colTitle}>{dict.footer.legalSectionTitle}</p>
+          <Link href={`/${lang}/aviso-legal`}>{dict.footer.legal}</Link>
+          <Link href={`/${lang}/privacidad`}>{dict.footer.privacy}</Link>
+          <Link href={`/${lang}/cookies`}>{dict.footer.cookies}</Link>
+          <Link href={`/${lang}/politica-ia`}>{dict.footer.aiPolicy}</Link>
+          <Link href={`/${lang}/principios-ingenieria`}>{dict.footer.engineeringPrinciples}</Link>
+        </nav>
+
         <div className={styles.contact}>
           <a href={`mailto:${dict.footer.email}`}>{dict.footer.email}</a>
           <a href={`tel:${dict.footer.phone.replace(/\s+/g, "")}`}>{dict.footer.phone}</a>

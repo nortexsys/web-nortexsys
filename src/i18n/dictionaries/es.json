@@ -44,7 +44,6 @@
     "metaDescription": "Somos una firma de desarrollo de software y consultoría tecnológica. Software a medida, IA agéntica y transformación digital con rigor y procesos claros.",
     "intro": {
       "title": "Quiénes somos",
-      "lead": "No entregamos únicamente código: traducimos necesidades de negocio, muchas veces poco definidas, en especificaciones claras, y de ahí construimos soluciones medibles.",
       "body": "Nortex Systems es una firma de desarrollo de software y consultoría tecnológica especializada en software a medida, IA agéntica y transformación digital. Trabajamos con negocios tradicionales que inician su digitalización y con plataformas complejas que necesitan escalar con inteligencia artificial, aplicando siempre el mismo nivel de rigor de ingeniería."
     },
     "mission": {
@@ -323,7 +322,41 @@
     "legal": "Aviso legal",
     "privacy": "Privacidad",
     "cookies": "Cookies",
+    "aiPolicy": "Política de IA",
+    "engineeringPrinciples": "Principios de Ingeniería",
     "email": "contact@nortexsys.com",
-    "phone": "+34 673 764 987"
+    "phone": "+34 673 764 987",
+    "legalSectionTitle": "Legal"
+  },
+  "locationPage": {
+    "metaTitle": "Dónde estamos",
+    "metaDescription": "Nortex Systems opera a través de sus entidades en España, Latam y Estados Unidos. Nuestras sedes y datos de contacto.",
+    "title": "Dónde estamos",
+    "lead": "Nortex Systems opera a través de sus entidades en España, Latam y Estados Unidos, con cobertura para clientes en toda la región.",
+    "viewMap": "Ver en Google Maps",
+    "offices": [
+      {
+        "region": "España",
+        "entity": "Fawalt Investment S.L.",
+        "address": "Calle Núñez de Balboa, 118, 1i, 28006 Madrid, España",
+        "mapsUrl": "https://maps.app.goo.gl/ugSGDjTwTCzPkd257"
+      },
+      {
+        "region": "Latam",
+        "entity": "Fawalt Investment S.L.",
+        "address": "Calle Anastasio Ruiz, oficina E-9, corregimiento de Bella Vista, provincia de Panamá, República de Panamá",
+        "mapsUrl": "https://maps.app.goo.gl/MELrUnaV8WRHgU9b8"
+      },
+      {
+        "region": "Estados Unidos",
+        "entity": "Guillén Cepeda&Solís",
+        "address": "320 E Yavapai Rd, Apt 1205, 85705 Tucson (AZ), Estados Unidos",
+        "mapsUrl": "https://maps.app.goo.gl/sCq9FCwAq3H1gqmk8"
+      }
+    ],
+    "contactTitle": "Contacto",
+    "ctaTitle": "¿Hablamos?",
+    "ctaBody": "Escríbenos y te respondemos por email lo antes posible.",
+    "ctaButton": "Escríbenos"
   }
 }

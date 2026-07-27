@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Icon, type IconName } from "@/components/ui/Icon";
+import { JsonLd } from "@/components/seo/JsonLd";
 import styles from "./home.module.css";
 
 // Map service icon id (from dictionary) to icon name.
@@ -49,6 +50,31 @@ export default async function HomePage({
 
   return (
     <>
+      {/* Structured data — Organization (schema.org) */}
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Nortex Systems",
+          alternateName: "Fawalt Investment S.L.",
+          url: "https://nortexsys.com",
+          logo: "https://nortexsys.com/brand/LOGO_Nortex.png",
+          description: dict.meta.tagline,
+          email: "contact@nortexsys.com",
+          telephone: "+34673764987",
+          foundingDate: "2026",
+          areaServed: ["ES", "MX", "CO", "AR", "PE", "CL", "US"],
+          knowsLanguage: ["es", "en"],
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Calle Núñez de Balboa, 118, 1º I",
+            addressLocality: "Madrid",
+            postalCode: "28006",
+            addressCountry: "ES",
+          },
+        }}
+      />
+
       {/* 1 · HERO — propuesta de valor + CTA */}
       {heroLayout === "full" ? (
         <section className={`${styles.hero} ${styles.heroFull}`}>
@@ -113,7 +139,7 @@ export default async function HomePage({
         <ul className={styles.serviceGrid}>
           {dict.services.list.map((s) => (
             <li key={s.id}>
-              <Card as="article" interactive>
+              <Card as="article" interactive className={styles.serviceCard}>
                 <div className={styles.serviceHead}>
                   <span className={styles.serviceIcon}>
                     <Icon name={serviceIcons[s.id] ?? "code"} size={26} />

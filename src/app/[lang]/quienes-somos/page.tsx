@@ -34,34 +34,30 @@ export default async function AboutPage({
   return (
     <>
       {/* 1 · Intro */}
-      <Container className={styles.intro} narrow>
+      <Container className={styles.intro}>
         <h1>{dict.about.intro.title}</h1>
-        <p className={styles.lead}>{dict.about.intro.lead}</p>
         <p className={styles.introBody}>{dict.about.intro.body}</p>
       </Container>
 
       {/* 2 · Mission */}
       <Section tone="muted">
-        <Container narrow>
-          <h2>{dict.about.mission.title}</h2>
-          <p className={styles.missionBody}>{dict.about.mission.body}</p>
-        </Container>
+        <h2 className={styles.sectionTitle}>{dict.about.mission.title}</h2>
+        <p className={styles.missionBody}>{dict.about.mission.body}</p>
       </Section>
 
       {/* 3 · Values */}
       <Section>
-        <header style={{ marginBottom: "var(--sp-12)", maxWidth: "60ch" }}>
-          <h2>{dict.about.values.title}</h2>
-          <p className="blockLead" style={{ fontSize: "var(--fs-lg)", color: "var(--text-muted)" }}>
-            {dict.about.values.subtitle}
-          </p>
+        <header className={styles.valuesHeader}>
+          <h2 className={styles.sectionTitle}>{dict.about.values.title}</h2>
+          <p className={styles.sectionLead}>{dict.about.values.subtitle}</p>
         </header>
         <ul className={styles.values}>
-          {dict.about.values.items.map((v) => (
-            <li key={v.name} className={styles.valueItem}>
+          {dict.about.values.items.map((v, i) => (
+            <li key={v.name}>
               <Card as="article" className={styles.valueCard}>
-                <h3>{v.name}</h3>
-                <p>{v.body}</p>
+                <span className={styles.valueCode}>{`0${i + 1}`}</span>
+                <h3 className={styles.valueName}>{v.name}</h3>
+                <p className={styles.valueBody}>{v.body}</p>
               </Card>
             </li>
           ))}
@@ -72,9 +68,7 @@ export default async function AboutPage({
       <Section tone="inverse">
         <Container narrow>
           <p className={styles.audienceLead}>{dict.about.audience.lead}</p>
-          <h2 style={{ color: "var(--text-inverse)", marginBottom: "var(--sp-4)" }}>
-            {dict.about.audience.title}
-          </h2>
+          <h2 className={styles.audienceTitle}>{dict.about.audience.title}</h2>
           <p className={styles.audienceBody}>{dict.about.audience.body}</p>
           <Button href={`/${lang}/contacto`} variant="primary" size="lg">
             {dict.about.audience.cta}

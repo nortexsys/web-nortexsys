@@ -15,20 +15,22 @@
   --accent-hover: #1e40af;
   --accent-soft: #dbeafe;
 
-  /* === Typography families (next/font exposes --font-*) =============== */
-  --font-display: var(--font-spectral), Georgia, "Times New Roman", serif;
-  --font-body: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* === Typography families (next/font exposes --font-*) ===============
+     Open Sans across the whole site — sans-serif everywhere (no display
+     serif), matching the clean technical look of the reference.            */
+  --font-display: var(--font-body), system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-body: var(--font-body), system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
 
-  /* === Type scale (1.250 — major third) ============================== */
+  /* === Type scale — larger, bolder headings (reference look) ========= */
   --fs-xs: 0.8rem;
   --fs-sm: 0.9rem;
   --fs-base: 1rem;
-  --fs-lg: 1.25rem;
-  --fs-xl: 1.563rem;
-  --fs-2xl: 1.953rem;
-  --fs-3xl: 2.441rem;
-  --fs-4xl: 3.052rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2.25rem;
+  --fs-4xl: 2.5rem;
 
   /* === Spacing scale (base 4px) ====================================== */
   --sp-1: 0.25rem;

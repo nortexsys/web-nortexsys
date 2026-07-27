@@ -124,7 +124,7 @@
   flex-direction: column;
   max-width: var(--container-max);
   margin-inline: auto;
-  padding: var(--sp-3) var(--container-pad) var(--sp-5);
+  padding: var(--sp-3) var(--container-pad) var(--sp-6);
 }
 
 .mobileNavList a {

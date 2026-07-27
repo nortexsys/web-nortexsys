@@ -1,19 +1,25 @@
+/*
+ * Button — Deloitte-style component language, Nortex palette.
+ *  - Small radius (4px), no shadow, color-change on hover only.
+ *  - Primary: solid accent.
+ *  - Inverse: solid navy (for use on light backgrounds, footer-ish).
+ *  - Ghost: outline that inverts on hover (transparent → filled).
+ */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--sp-2);
   font-family: var(--font-body);
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   border: 1px solid transparent;
-  border-radius: var(--radius);
+  border-radius: 4px;
   cursor: pointer;
-  transition:
-    background var(--dur-fast) var(--ease),
-    color var(--dur-fast) var(--ease),
-    border-color var(--dur-fast) var(--ease);
+  transition: background-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
   white-space: nowrap;
+  line-height: 1.2;
 }
 
 .btn:hover {
@@ -22,12 +28,12 @@
 
 /* === Sizes =========================================================== */
 .md {
-  padding: var(--sp-2) var(--sp-4);
+  padding: 10px 22px;
   font-size: var(--fs-sm);
 }
 
 .lg {
-  padding: var(--sp-3) var(--sp-6);
+  padding: 14px 28px;
   font-size: var(--fs-base);
 }
 
@@ -41,6 +47,7 @@
   background: var(--accent-hover);
 }
 
+/* Inverse: solid navy button (for light sections that need a dark CTA) */
 .inverse {
   background: var(--brand-navy);
   color: var(--text-inverse);
@@ -50,6 +57,7 @@
   background: #16314f;
 }
 
+/* Ghost: outline that inverts on hover (Deloitte secondary pattern) */
 .ghost {
   background: transparent;
   color: var(--accent);
@@ -57,5 +65,6 @@
 }
 
 .ghost:hover {
-  background: var(--accent-soft);
+  background: var(--accent);
+  color: #fff;
 }

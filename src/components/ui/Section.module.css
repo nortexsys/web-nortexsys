@@ -1,5 +1,5 @@
 .section {
-  padding-block: var(--sp-16);
+  padding-block: var(--sp-24);
 }
 
 .muted {
@@ -13,4 +13,10 @@
 
 .inverse :is(h1, h2, h3, h4) {
   color: var(--text-inverse);
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding-block: var(--sp-16);
+  }
 }

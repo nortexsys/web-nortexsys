@@ -33,10 +33,12 @@ type IconProps = {
 const paths: Record<IconName, React.ReactNode> = {
   web: (
     <>
-      <rect x="2.5" y="4.5" width="19" height="15" rx="2" />
-      <path d="M2.5 8.5h19" />
-      <path d="M5.5 6.5h.01M8 6.5h.01" />
-      <path d="M9 13.5l-2 2 2 2M15 13.5l2 2-2 2" />
+      <rect x="2" y="3.5" width="20" height="17" rx="2" />
+      <path d="M2 8h20" />
+      <path d="M5 5.75h.01M7.5 5.75h.01M10 5.75h.01" />
+      <path d="M8 14.5l-2.2 2 2.2 2" />
+      <path d="M16 14.5l2.2 2-2.2 2" />
+      <path d="M13 12.5l-2 7" />
     </>
   ),
   code: (

@@ -19,6 +19,11 @@ type ButtonAsButton = CommonProps &
 
 type ButtonAsLink = CommonProps & {
   href: string;
+  /**
+   * Mark the link as external: opens in a new tab with rel="noopener noreferrer".
+   * Use for links that leave the site (Google Maps, shop, etc.).
+   */
+  external?: boolean;
 };
 
 type ButtonProps = ButtonAsButton | ButtonAsLink;
@@ -51,8 +56,23 @@ export function Button({
     .join(" ");
 
   if ("href" in rest && rest.href !== undefined) {
+    const { href, external } = rest;
+    // External links render a plain <a> (not next/link) so target/rel apply
+    // and the router doesn't try to prefetch a foreign origin.
+    if (external) {
+      return (
+        <a
+          href={href}
+          className={classes}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {children}
+        </a>
+      );
+    }
     return (
-      <Link href={rest.href} className={classes}>
+      <Link href={href} className={classes}>
         {children}
       </Link>
     );

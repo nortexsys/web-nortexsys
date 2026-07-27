@@ -1,28 +1,27 @@
-/* === Intro ========================================================== */
-.intro {
-  padding-block: var(--sp-16) var(--sp-12);
+/* === Intro + wheel row ==============================================
+   Stacked (intro text, then wheel) on mobile; side by side from 960px,
+   text capped at 60ch (same measure as .lead) so the wheel gets whatever
+   width remains to the right instead of a fixed share. */
+.introRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-12);
 }
 
 .intro h1 {
   margin-bottom: var(--sp-4);
 }
 
-.lead {
-  font-size: var(--fs-xl);
-  line-height: 1.5;
-  color: var(--text-primary);
-  max-width: 60ch;
-  margin-bottom: var(--sp-4);
+.diagramWrap {
+  position: relative;
 }
 
-.cycleNote {
-  font-family: var(--font-mono);
-  font-size: var(--fs-sm);
-  color: var(--accent);
-  background: var(--accent-soft);
-  padding: var(--sp-2) var(--sp-4);
-  border-radius: var(--radius);
-  display: inline-block;
+.lead {
+  font-size: var(--fs-lg);
+  line-height: 1.7;
+  color: var(--text-body);
+  max-width: 60ch;
+  margin-bottom: var(--sp-4);
 }
 
 /* === Flow diagram =================================================== */
@@ -40,6 +39,12 @@
   grid-template-columns: auto 1fr;
   gap: var(--sp-4);
   align-items: center;
+}
+
+/* Closing connector (D5 → D1) is desktop-wheel-only; hidden on the
+   mobile/vertical list where a loop-back arrow reads as a stray element. */
+.connectorClosing {
+  display: none;
 }
 
 .phaseIcon {
@@ -85,10 +90,10 @@
   height: 1.75rem;
   align-items: center;
   color: var(--accent);
-  grid-column: 1 / -1;
 }
 
-.connector svg {
+.connector svg,
+.connectorClosing svg {
   width: 100%;
   height: 100%;
 }
@@ -200,33 +205,106 @@
   margin-bottom: var(--sp-8);
 }
 
-/* === Responsive: horizontal flow on desktop ========================= */
+/* === Responsive: circular wheel on desktop ==========================
+   Discover sits at 12 o'clock; the rest follow clockwise (D2 → D5), with
+   a closing connector back to D1 — positions are computed inline (see
+   wheelPosition() in page.tsx), this block only switches the layout mode. */
 @media (min-width: 960px) {
+  .introRow {
+    display: grid;
+    grid-template-columns: minmax(0, 60ch) 1fr;
+    align-items: center;
+    gap: var(--sp-8);
+  }
+
   .diagram {
-    flex-direction: row;
-    align-items: stretch;
-    gap: 0;
+    position: relative;
+    display: block;
+    width: min(100%, 19rem);
+    aspect-ratio: 1;
+    margin-inline: auto;
+  }
+
+  /* Dashed circular track the phases sit on */
+  .diagram::before {
+    content: "";
+    position: absolute;
+    inset: 8%;
+    border: 1px dashed var(--border-hair);
+    border-radius: var(--radius-pill);
+  }
+
+  /* Decorative hub at the center of the wheel */
+  .diagram::after {
+    content: "";
+    position: absolute;
+    inset: 44%;
+    background: var(--bg-muted);
+    border: 1px solid var(--border-hair);
+    border-radius: 999px;
   }
 
   .phase {
-    grid-template-columns: 1fr;
-    flex: 1 1 0;
-    gap: var(--sp-3);
-    text-align: left;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-1);
+    width: 5rem;
+    text-align: center;
+  }
+
+  .phaseIcon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .phaseIcon svg {
+    width: 14px;
+    height: 14px;
   }
 
   .phaseBody {
-    height: 100%;
+    background: none;
+    border: none;
+    padding: 0;
   }
 
-  /* Horizontal connector between phases */
-  .connector {
-    grid-column: auto;
-    height: auto;
-    width: 2.5rem;
+  .phaseCode {
+    font-size: 0.55rem;
+  }
+
+  .phaseName {
+    display: block;
+    margin-inline-start: 0;
+    margin-top: 0;
+    font-size: 0.7rem;
+  }
+
+  /* Tangential flow arrows between phases on the wheel ring.
+     Resets the mobile .connector's padding-left/justify-content — left
+     over from the vertical layout — which otherwise squeezes the icon
+     to zero width at this size. */
+  .connector,
+  .connectorClosing {
+    position: absolute;
+    display: flex;
+    justify-content: center;
     padding-left: 0;
-    align-self: center;
-    flex: 0 0 auto;
+    width: 1rem;
+    height: 1rem;
+    color: var(--accent);
+    transform: translate(-50%, -50%) rotate(var(--rotate));
+  }
+
+  .connectorClosing {
+    display: flex;
+  }
+
+  /* The closing connector already shows D5 → D1 on the wheel ring */
+  .loopHint {
+    display: none;
   }
 }
 

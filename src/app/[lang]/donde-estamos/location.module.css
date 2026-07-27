@@ -1,0 +1,216 @@
+/* === Intro ========================================================== */
+.intro {
+  padding-block: var(--sp-16) var(--sp-4);
+}
+
+.intro h1 {
+  margin-bottom: var(--sp-4);
+}
+
+.lead {
+  font-size: var(--fs-lg);
+  line-height: 1.7;
+  color: var(--text-body);
+  max-width: 50ch;
+}
+
+/* === Locations map ================================================== */
+.mapSection.mapSection {
+  padding-block-start: var(--sp-2);
+}
+
+.mapWrap {
+  position: relative;
+  display: block;
+  line-height: 0;
+}
+
+.mapImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg, 12px);
+}
+
+/* --- Holographic markers --- */
+.marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.marker:focus-visible {
+  outline: 2px solid #7cc4ff;
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+.markerDot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #9fd4ff;
+  box-shadow: 0 0 10px 2px rgba(90, 180, 255, 0.9);
+  transition: background var(--dur-fast, 0.15s) var(--ease),
+    box-shadow var(--dur-fast, 0.15s) var(--ease);
+}
+
+.markerPulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1.5px solid rgba(124, 196, 255, 0.7);
+  animation: markerPulse 2.4s ease-out infinite;
+}
+
+.marker:hover .markerDot,
+.markerActive .markerDot {
+  background: #d6ecff;
+  box-shadow: 0 0 16px 4px rgba(124, 196, 255, 1);
+}
+
+@keyframes markerPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3.2);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .markerPulse {
+    animation: none;
+  }
+}
+
+/* --- Floating office card --- */
+.mapCard {
+  position: absolute;
+  z-index: 3;
+  background: rgba(9, 24, 46, 0.94);
+  border: 1px solid rgba(93, 148, 214, 0.55);
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(93, 148, 214, 0.2);
+  padding: var(--sp-4);
+  line-height: 1.5;
+  pointer-events: none;
+  animation: cardIn var(--dur-fast, 0.15s) var(--ease);
+}
+
+.mapCardAbove {
+  transform: translateY(-100%);
+}
+
+.cardRegion {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #7cc4ff;
+  margin: 0;
+}
+
+.cardEntity {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: #f2f7fd;
+  margin: var(--sp-1) 0 0;
+}
+
+.cardAddress {
+  font-size: var(--fs-sm);
+  color: #c2d6ee;
+  margin: var(--sp-2) 0 0;
+}
+
+.cardMapLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: var(--sp-3);
+  pointer-events: auto;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: #9fd4ff;
+  text-decoration: none;
+}
+
+.cardMapLink:hover {
+  color: #d6ecff;
+  text-decoration: underline;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* === Contact + CTA ================================================== */
+.contactTitle {
+  color: var(--text-inverse);
+  margin-bottom: var(--sp-4);
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--sp-8);
+  display: grid;
+  gap: var(--sp-3);
+}
+
+.contactList a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-lg);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.92;
+}
+
+.contactList a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.contactLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--accent-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-right: var(--sp-1);
+}
+
+.ctaBody {
+  color: var(--text-inverse);
+  opacity: 0.9;
+  font-size: var(--fs-lg);
+  margin-bottom: var(--sp-6);
+  max-width: 50ch;
+}

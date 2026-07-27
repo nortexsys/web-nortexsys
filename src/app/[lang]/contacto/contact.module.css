@@ -7,9 +7,9 @@
 }
 
 .lead {
-  font-size: var(--fs-xl);
-  line-height: 1.5;
-  color: var(--text-primary);
+  font-size: var(--fs-lg);
+  line-height: 1.7;
+  color: var(--text-body);
   max-width: 50ch;
 }
 

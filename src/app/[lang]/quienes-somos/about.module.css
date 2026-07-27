@@ -1,39 +1,62 @@
-/* === Page intro ===================================================== */
+/*
+ * Quiénes Somos — Deloitte-style layout language, Nortex palette.
+ * Shares the look of the redesigned Home: Open Sans everywhere, 4px corners,
+ * hairline borders, generous rhythm, accent reserved for icons/codes/links.
+ *
+ * All section H2s align to the container's left edge (no maxWidth shifting
+ * them), so "Quiénes Somos", "Misión" and "Valores" line up vertically.
+ */
+
+/* === 1 · Intro ====================================================== */
 .intro {
   padding-block: var(--sp-16) var(--sp-12);
 }
 
 .intro h1 {
   margin-bottom: var(--sp-4);
-}
-
-.lead {
-  font-size: var(--fs-xl);
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.3;
-  color: var(--text-primary);
-  max-width: 30ch;
-  margin-bottom: var(--sp-6);
+  font-size: var(--fs-4xl);
 }
 
 .introBody {
   font-size: var(--fs-lg);
   line-height: 1.7;
   color: var(--text-body);
+  max-width: 70ch;
 }
 
-/* === Mission ======================================================== */
-.missionBody {
-  font-size: var(--fs-xl);
-  line-height: 1.5;
+/* === Section headers (shared) ====================================== */
+.sectionTitle {
+  font-size: var(--fs-3xl);
+  font-weight: 700;
   color: var(--text-primary);
-  font-family: var(--font-display);
-  font-weight: 600;
-  max-width: 40ch;
+  margin-bottom: var(--sp-3);
 }
 
-/* === Values grid ==================================================== */
+.sectionLead {
+  font-size: var(--fs-lg);
+  line-height: 1.7;
+  color: var(--text-body);
+  max-width: 70ch;
+}
+
+/* === 2 · Mission ==================================================== */
+.mission {
+  /* nothing special — uses sectionTitle + missionBody */
+}
+
+.missionBody {
+  font-size: var(--fs-lg);
+  line-height: 1.7;
+  color: var(--text-body);
+  max-width: 70ch;
+  margin-top: var(--sp-2);
+}
+
+/* === 3 · Values ===================================================== */
+.valuesHeader {
+  margin-bottom: var(--sp-12);
+}
+
 .values {
   list-style: none;
   padding: 0;
@@ -41,45 +64,72 @@
   display: grid;
   gap: var(--sp-4);
   grid-template-columns: 1fr;
+  align-items: stretch;
+  justify-items: stretch;
 }
 
-.valueItem {
-  height: 100%;
+.values > li {
+  width: 100%;
 }
 
 .valueCard {
   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
 }
 
-.values li h3 {
+.valueCode {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.valueName {
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: var(--fs-lg);
-  margin-bottom: var(--sp-1);
-}
-
-.values li p {
-  font-size: var(--fs-base);
-  color: var(--text-muted);
+  line-height: 1.3;
+  color: var(--text-primary);
   margin: 0;
 }
 
-/* === Audience band ================================================== */
+.valueBody {
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+  margin-top: auto; /* align descriptions across cards */
+}
+
+/* === 4 · Audience + CTA ============================================ */
+.audienceLead {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: var(--sp-3);
+}
+
+.audienceTitle {
+  font-size: var(--fs-3xl);
+  font-weight: 700;
+  color: var(--text-inverse);
+  margin-bottom: var(--sp-4);
+}
+
 .audienceBody {
   font-size: var(--fs-lg);
   line-height: 1.7;
   color: var(--text-inverse);
   opacity: 0.92;
   max-width: 60ch;
-  margin-bottom: var(--sp-6);
+  margin-bottom: var(--sp-8);
 }
 
-.audienceLead {
-  font-family: var(--font-display);
-  font-size: var(--fs-2xl);
-  color: #fff;
-  margin-bottom: var(--sp-2);
-}
-
-/* === Responsive ===================================================== */
+/* === Responsive ==================================================== */
 @media (min-width: 640px) {
   .values {
     grid-template-columns: repeat(2, 1fr);

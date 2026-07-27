@@ -1,18 +1,22 @@
+/*
+ * Card — Deloitte-style: nearly-square corners (4px), hairline border,
+ * barely-there shadow at rest that deepens on hover (no lift).
+ */
 .card {
   background: var(--bg-surface);
   border: 1px solid var(--border-hair);
-  border-radius: var(--radius-lg);
+  border-radius: 4px;
   padding: var(--sp-6);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
 .interactive {
-  transition:
-    box-shadow var(--dur-fast) var(--ease),
-    transform var(--dur-fast) var(--ease);
+  transition: box-shadow var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+  cursor: pointer;
 }
 
 .interactive:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-color: var(--border-strong);
 }

@@ -50,6 +50,18 @@
   opacity: 1;
 }
 
+/* Section heading inside footer columns */
+.colTitle {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-soft);
+  margin: 0 0 var(--sp-3);
+  opacity: 1;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -69,6 +81,6 @@
 
 @media (min-width: 720px) {
   .inner {
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
   }
 }

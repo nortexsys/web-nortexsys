@@ -8,9 +8,9 @@
 }
 
 .lead {
-  font-size: var(--fs-xl);
-  line-height: 1.5;
-  color: var(--text-primary);
+  font-size: var(--fs-lg);
+  line-height: 1.7;
+  color: var(--text-body);
   max-width: 50ch;
 }
 
@@ -68,6 +68,78 @@
 
 .block:last-child {
   border-bottom: none;
+}
+
+/* Blocks with an illustration: text column + image column, sharing one
+   surface so they read as a single composition instead of two boxes. */
+.blockSplit {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  background: var(--bg-muted);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Dark variant: navy surface that matches the illustration background so
+   image + text read as one composition. All text turns white. Applied
+   only to blocks that opt in (see `dark` flag in page.tsx). */
+.blockDark {
+  background: #071221;
+}
+
+.blockDark .blockCode,
+.blockDark .blockTitle,
+.blockDark .blockTarget,
+.blockDark .blockIntro,
+.blockDark .items li {
+  color: #fff;
+}
+
+.blockText {
+  padding: var(--sp-8);
+}
+
+.blockImageWrap {
+  position: relative;
+  min-height: 220px;
+}
+
+.blockImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .blockSplit {
+    grid-template-columns: 1.15fr 1fr;
+  }
+
+  .blockImageWrap {
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  /* Mirrored layout: image column on the left, text on the right, with the
+     diagonal cut flipped to the image's right edge. */
+  .blockReversed {
+    grid-template-columns: 1fr 1.15fr;
+  }
+
+  .blockReversed .blockImageWrap {
+    clip-path: polygon(0 0, 88% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* Source order is text-then-image; swap it so the image renders first
+   (left) and the text second (right). Works at every breakpoint. */
+.blockReversed .blockText {
+  order: 2;
+}
+
+.blockReversed .blockImageWrap {
+  order: 1;
 }
 
 .blockHead {
@@ -136,7 +208,7 @@
 
 .items li {
   position: relative;
-  padding-left: var(--sp-5);
+  padding-left: var(--sp-6);
   color: var(--text-body);
   font-size: var(--fs-base);
   line-height: 1.6;

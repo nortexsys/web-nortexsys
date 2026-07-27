@@ -32,7 +32,7 @@ export default async function ContactPage({
 
   return (
     <>
-      <Container className={styles.intro} narrow>
+      <Container className={styles.intro}>
         <h1>{dict.contactPage.title}</h1>
         <p className={styles.lead}>{dict.contactPage.lead}</p>
       </Container>
