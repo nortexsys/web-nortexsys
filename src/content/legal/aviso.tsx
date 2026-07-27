@@ -37,6 +37,16 @@ export const avisoSections: Record<
             28006 Madrid, España.
           </p>
           <p>El acceso al presente sitio web implica la aceptación del presente Aviso Legal.</p>
+          <p>
+            Nortex Systems cuenta con presencia en Estados Unidos a través de la
+            entidad independiente <strong>Guillén Cepeda&amp;Solís</strong>,
+            que aporta domicilio y presencia física en dicho país. Guillén
+            Cepeda&amp;Solís no interviene en la titularidad de este sitio web
+            ni en el tratamiento de los datos personales de los usuarios: esta
+            web es titularidad exclusiva de FAWALT INVESTMENT S.L., que es
+            también la única responsable del tratamiento de dichos datos (ver
+            Política de Privacidad).
+          </p>
         </>
       ),
     },
@@ -164,6 +174,16 @@ export const avisoSections: Record<
             28006 Madrid, Spain.
           </p>
           <p>Access to this website implies acceptance of this Legal Notice.</p>
+          <p>
+            Nortex Systems has a presence in the United States through the
+            independent entity <strong>Guillén Cepeda&amp;Solís</strong>,
+            which provides a registered address and physical presence in that
+            country. Guillén Cepeda&amp;Solís is not involved in the
+            ownership of this website nor in the processing of users'
+            personal data: this website is owned exclusively by FAWALT
+            INVESTMENT S.L., which is also the sole controller of such data
+            (see Privacy Policy).
+          </p>
         </>
       ),
     },

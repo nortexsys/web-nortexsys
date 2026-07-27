@@ -12,6 +12,8 @@ En cumplimiento de la Ley 34/2002, de Servicios de la Sociedad de la Informació
 
 El acceso al presente sitio web implica la aceptación del presente Aviso Legal.
 
+Nortex Systems cuenta con presencia en Estados Unidos a través de la entidad independiente **Guillén Cepeda&Solís**, que aporta domicilio y presencia física en dicho país. Guillén Cepeda&Solís no interviene en la titularidad de este sitio web ni en el tratamiento de los datos personales de los usuarios: esta web es titularidad exclusiva de FAWALT INVESTMENT S.L., que es también la única responsable del tratamiento de dichos datos (ver Política de Privacidad).
+
 ---
 
 ## 2. Objeto

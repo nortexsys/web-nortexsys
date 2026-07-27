@@ -40,6 +40,14 @@ export const privacidadSections: Record<
             <strong>Domicilio social:</strong> Calle Núñez de Balboa, 118, 1º I,
             28006 Madrid, España.
           </p>
+          <p>
+            Nortex Systems tiene presencia en Estados Unidos a través de la
+            entidad independiente Guillén Cepeda&amp;Solís, que aporta
+            únicamente domicilio y presencia física en dicho país. Guillén
+            Cepeda&amp;Solís no trata datos personales de los usuarios de este
+            sitio web en ningún caso: todo el tratamiento de datos descrito en
+            esta política lo realiza exclusivamente FAWALT INVESTMENT S.L.
+          </p>
         </>
       ),
     },
@@ -213,6 +221,15 @@ export const privacidadSections: Record<
             <br />
             <strong>Registered office:</strong> Calle Núñez de Balboa, 118, 1º I,
             28006 Madrid, Spain.
+          </p>
+          <p>
+            Nortex Systems has a presence in the United States through the
+            independent entity Guillén Cepeda&amp;Solís, which provides only a
+            registered address and physical presence in that country. Guillén
+            Cepeda&amp;Solís does not process any personal data of this
+            website's users under any circumstances: all data processing
+            described in this policy is carried out exclusively by FAWALT
+            INVESTMENT S.L.
           </p>
         </>
       ),

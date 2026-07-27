@@ -13,7 +13,7 @@ import "@/styles/globals.css";
 const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "600", "700"],
-  variable: "--font-body",
+  variable: "--font-sans-raw",
   display: "swap",
 });
 

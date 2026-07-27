@@ -10,6 +10,8 @@ En cumplimiento del Reglamento (UE) 2016/679, General de Protección de Datos (R
 **NIF:** B16870008  
 **Domicilio social:** Calle Núñez de Balboa, 118, 1º I, 28006 Madrid, España.
 
+Nortex Systems tiene presencia en Estados Unidos a través de la entidad independiente Guillén Cepeda&Solís, que aporta únicamente domicilio y presencia física en dicho país. Guillén Cepeda&Solís no trata datos personales de los usuarios de este sitio web en ningún caso: todo el tratamiento de datos descrito en esta política lo realiza exclusivamente FAWALT INVESTMENT S.L.
+
 ---
 
 ## 2. Datos personales que recopilamos

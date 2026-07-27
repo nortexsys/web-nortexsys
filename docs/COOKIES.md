@@ -16,48 +16,11 @@ Las cookies son pequeños archivos que un sitio web almacena en el dispositivo d
 
 ---
 
-## 3. Tipos de cookies
+## 3. Situación actual y tipos de cookies
 
-### Cookies técnicas
+Actualmente este sitio web **no instala cookies de análisis, preferencias ni publicidad**. Únicamente pueden emplearse cookies o mecanismos técnicos estrictamente necesarios para el funcionamiento del sitio (por ejemplo, seguridad o gestión básica de sesión), que no requieren consentimiento.
 
-Son necesarias para el funcionamiento del sitio web y no requieren consentimiento.
-
-Permiten:
-
-- Navegación.
-- Gestión de sesiones.
-- Seguridad.
-- Preferencias básicas.
-
----
-
-### Cookies de preferencias
-
-Permiten recordar configuraciones elegidas por el usuario.
-
----
-
-### Cookies analíticas
-
-Permiten conocer cómo utilizan los visitantes el sitio web con el objetivo de mejorar su funcionamiento.
-
-Pueden recopilar información como:
-
-- Número de visitantes.
-- Páginas visitadas.
-- Tiempo de navegación.
-- Navegador utilizado.
-- Dispositivo empleado.
-
-Estas cookies solo se instalarán con el consentimiento del usuario.
-
----
-
-### Cookies publicitarias
-
-Permiten mostrar publicidad personalizada y medir campañas de marketing.
-
-Solo se instalarán con el consentimiento del usuario.
+Si en el futuro se incorporan cookies analíticas, de preferencias o publicitarias, estas solo se instalarán tras obtener el consentimiento previo del usuario a través del correspondiente panel de gestión de cookies, que se habilitará antes de activar dichas cookies. Esta política se actualizará en ese momento para detallar cada cookie, su finalidad y su duración.
 
 ---
 
@@ -71,13 +34,7 @@ Cada proveedor dispone de su propia política de privacidad y cookies.
 
 ## 5. Gestión del consentimiento
 
-Al acceder al sitio web, el usuario podrá:
-
-- Aceptar todas las cookies.
-- Rechazar las cookies no necesarias.
-- Configurar sus preferencias.
-
-El consentimiento podrá modificarse o retirarse en cualquier momento.
+Mientras el sitio no instale cookies no técnicas, no se requiere recabar consentimiento y no se muestra panel de configuración. En cuanto se incorpore alguna cookie analítica, de preferencias o publicitaria, el usuario podrá aceptarla, rechazarla o configurar sus preferencias antes de que se instale, y podrá modificar o retirar su consentimiento en cualquier momento.
 
 ---
 

@@ -18,8 +18,8 @@
   /* === Typography families (next/font exposes --font-*) ===============
      Open Sans across the whole site — sans-serif everywhere (no display
      serif), matching the clean technical look of the reference.            */
-  --font-display: var(--font-body), system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  --font-body: var(--font-body), system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-display: var(--font-sans-raw), system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-body: var(--font-sans-raw), system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
 
   /* === Type scale — larger, bolder headings (reference look) ========= */

@@ -45,31 +45,24 @@ export const cookiesSections: Record<
       ),
     },
     {
-      title: "3. Tipos de cookies",
+      title: "3. Situación actual y tipos de cookies",
       body: (
         <>
-          <h3 style={{ fontSize: "var(--fs-lg)", margin: "var(--sp-4) 0 var(--sp-2)" }}>Cookies técnicas</h3>
-          <p>Son necesarias para el funcionamiento del sitio web y no requieren consentimiento. Permiten:</p>
-          <ul>
-            <li>Navegación.</li>
-            <li>Gestión de sesiones.</li>
-            <li>Seguridad.</li>
-            <li>Preferencias básicas.</li>
-          </ul>
-          <h3 style={{ fontSize: "var(--fs-lg)", margin: "var(--sp-4) 0 var(--sp-2)" }}>Cookies de preferencias</h3>
-          <p>Permiten recordar configuraciones elegidas por el usuario.</p>
-          <h3 style={{ fontSize: "var(--fs-lg)", margin: "var(--sp-4) 0 var(--sp-2)" }}>Cookies analíticas</h3>
-          <p>Permiten conocer cómo utilizan los visitantes el sitio web con el objetivo de mejorar su funcionamiento. Pueden recopilar información como:</p>
-          <ul>
-            <li>Número de visitantes.</li>
-            <li>Páginas visitadas.</li>
-            <li>Tiempo de navegación.</li>
-            <li>Navegador utilizado.</li>
-            <li>Dispositivo empleado.</li>
-          </ul>
-          <p>Estas cookies solo se instalarán con el consentimiento del usuario.</p>
-          <h3 style={{ fontSize: "var(--fs-lg)", margin: "var(--sp-4) 0 var(--sp-2)" }}>Cookies publicitarias</h3>
-          <p>Permiten mostrar publicidad personalizada y medir campañas de marketing. Solo se instalarán con el consentimiento del usuario.</p>
+          <p>
+            Actualmente este sitio web <strong>no instala cookies de análisis,
+            preferencias ni publicidad</strong>. Únicamente pueden emplearse
+            cookies o mecanismos técnicos estrictamente necesarios para el
+            funcionamiento del sitio (por ejemplo, seguridad o gestión básica de
+            sesión), que no requieren consentimiento.
+          </p>
+          <p>
+            Si en el futuro se incorporan cookies analíticas, de preferencias o
+            publicitarias, estas solo se instalarán tras obtener el
+            consentimiento previo del usuario a través del correspondiente
+            panel de gestión de cookies, que se habilitará antes de activar
+            dichas cookies. Esta política se actualizará en ese momento para
+            detallar cada cookie, su finalidad y su duración.
+          </p>
         </>
       ),
     },
@@ -86,15 +79,14 @@ export const cookiesSections: Record<
     {
       title: "5. Gestión del consentimiento",
       body: (
-        <>
-          <p>Al acceder al sitio web, el usuario podrá:</p>
-          <ul>
-            <li>Aceptar todas las cookies.</li>
-            <li>Rechazar las cookies no necesarias.</li>
-            <li>Configurar sus preferencias.</li>
-          </ul>
-          <p>El consentimiento podrá modificarse o retirarse en cualquier momento.</p>
-        </>
+        <p>
+          Mientras el sitio no instale cookies no técnicas, no se requiere
+          recabar consentimiento y no se muestra panel de configuración. En
+          cuanto se incorpore alguna cookie analítica, de preferencias o
+          publicitaria, el usuario podrá aceptarla, rechazarla o configurar sus
+          preferencias antes de que se instale, y podrá modificar o retirar su
+          consentimiento en cualquier momento.
+        </p>
       ),
     },
     {
@@ -152,31 +144,24 @@ export const cookiesSections: Record<
       ),
     },
     {
-      title: "3. Types of cookies",
+      title: "3. Current status and types of cookies",
       body: (
         <>
-          <h3 style={{ fontSize: "var(--fs-lg)", margin: "var(--sp-4) 0 var(--sp-2)" }}>Technical cookies</h3>
-          <p>These are necessary for the operation of the website and do not require consent. They allow:</p>
-          <ul>
-            <li>Navigation.</li>
-            <li>Session management.</li>
-            <li>Security.</li>
-            <li>Basic preferences.</li>
-          </ul>
-          <h3 style={{ fontSize: "var(--fs-lg)", margin: "var(--sp-4) 0 var(--sp-2)" }}>Preference cookies</h3>
-          <p>They allow remembering settings chosen by the user.</p>
-          <h3 style={{ fontSize: "var(--fs-lg)", margin: "var(--sp-4) 0 var(--sp-2)" }}>Analytical cookies</h3>
-          <p>They allow knowing how visitors use the website in order to improve its operation. They may collect information such as:</p>
-          <ul>
-            <li>Number of visitors.</li>
-            <li>Pages visited.</li>
-            <li>Navigation time.</li>
-            <li>Browser used.</li>
-            <li>Device used.</li>
-          </ul>
-          <p>These cookies will only be installed with the user's consent.</p>
-          <h3 style={{ fontSize: "var(--fs-lg)", margin: "var(--sp-4) 0 var(--sp-2)" }}>Advertising cookies</h3>
-          <p>They allow showing personalized advertising and measuring marketing campaigns. They will only be installed with the user's consent.</p>
+          <p>
+            This website currently <strong>does not install analytical,
+            preference or advertising cookies</strong>. Only strictly
+            necessary technical cookies or mechanisms may be used (for
+            example, security or basic session management), which do not
+            require consent.
+          </p>
+          <p>
+            If analytical, preference or advertising cookies are added in the
+            future, they will only be installed after obtaining the user's
+            prior consent through the corresponding cookie management panel,
+            which will be enabled before such cookies are activated. This
+            policy will be updated at that time to detail each cookie, its
+            purpose and its duration.
+          </p>
         </>
       ),
     },
@@ -193,15 +178,14 @@ export const cookiesSections: Record<
     {
       title: "5. Consent management",
       body: (
-        <>
-          <p>When accessing the website, the user may:</p>
-          <ul>
-            <li>Accept all cookies.</li>
-            <li>Reject non-essential cookies.</li>
-            <li>Configure their preferences.</li>
-          </ul>
-          <p>Consent may be modified or withdrawn at any time.</p>
-        </>
+        <p>
+          As long as the website does not install non-technical cookies, no
+          consent needs to be collected and no configuration panel is shown.
+          As soon as any analytical, preference or advertising cookie is
+          added, the user will be able to accept it, reject it, or configure
+          their preferences before it is installed, and may modify or
+          withdraw their consent at any time.
+        </p>
       ),
     },
     {
