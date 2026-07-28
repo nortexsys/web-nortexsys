@@ -77,10 +77,7 @@ export default async function LangLayout({
         <Header dict={dict} lang={lang as Locale} />
         <main id="main">{children}</main>
         <Footer dict={dict} lang={lang as Locale} />
-      {/* impeccable-live-start */}
-<script src="http://localhost:8400/live.js?token=ca8d0f42-2d98-4424-a23f-eda9e651759a"></script>
-{/* impeccable-live-end */}
-</body>
+      </body>
     </html>
   );
 }
