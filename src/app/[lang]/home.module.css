@@ -170,6 +170,12 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+
+.serviceCard:hover {
+  text-decoration: none;
 }
 
 /* === 3 · 5D Method line ============================================= */

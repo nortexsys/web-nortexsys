@@ -7,6 +7,7 @@ type CardProps = {
   /** make the whole card hover-lift (for clickable cards) */
   interactive?: boolean;
   className?: string;
+  [key: string]: unknown;
 };
 
 export function Card({
@@ -14,12 +15,14 @@ export function Card({
   as: Tag = "div",
   interactive = false,
   className,
+  ...rest
 }: CardProps) {
   return (
     <Tag
       className={[styles.card, interactive ? styles.interactive : "", className]
         .filter(Boolean)
         .join(" ")}
+      {...rest}
     >
       {children}
     </Tag>

@@ -139,7 +139,12 @@ export default async function HomePage({
         <ul className={styles.serviceGrid}>
           {dict.services.list.map((s) => (
             <li key={s.id}>
-              <Card as="article" interactive className={styles.serviceCard}>
+              <Card
+                as={Link}
+                href={`/${lang}/servicios#srv-${s.id}`}
+                interactive
+                className={styles.serviceCard}
+              >
                 <div className={styles.serviceHead}>
                   <span className={styles.serviceIcon}>
                     <Icon name={serviceIcons[s.id] ?? "code"} size={26} />
