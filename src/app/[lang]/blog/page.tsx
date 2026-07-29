@@ -1,7 +1,10 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
-import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
+import { Container } from "@/components/ui/Container";
+import { getReadingMinutes, getSortedBlogPosts } from "@/content/blog/posts";
 import styles from "./blog.module.css";
 
 export async function generateMetadata({
@@ -13,12 +16,19 @@ export async function generateMetadata({
   const dict = await getDictionary(lang as Locale);
   return {
     title: dict.blogPage.metaTitle,
-    // Placeholder page — keep it out of search results until there is real content.
-    robots: { index: false, follow: true },
+    description: dict.blogPage.metaDescription,
     alternates: {
       languages: { es: "/es/blog", en: "/en/blog" },
     },
   };
+}
+
+function formatDate(iso: string, lang: Locale) {
+  return new Intl.DateTimeFormat(lang === "es" ? "es-ES" : "en-US", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(`${iso}T00:00:00`));
 }
 
 export default async function BlogPage({
@@ -28,15 +38,53 @@ export default async function BlogPage({
 }) {
   const { lang } = await params;
   const dict = await getDictionary(lang as Locale);
+  const posts = getSortedBlogPosts();
 
   return (
-    <section className={styles.wrap}>
-      <h1>{dict.blogPage.title}</h1>
-      <p className={styles.lead}>{dict.blogPage.lead}</p>
-      <p className={styles.body}>{dict.blogPage.body}</p>
-      <Button href={`/${lang}/contacto`} variant="ghost" size="lg">
-        {dict.blogPage.cta}
-      </Button>
-    </section>
+    <>
+      <Container className={styles.intro}>
+        <h1>{dict.blogPage.title}</h1>
+        <p className={styles.lead}>{dict.blogPage.lead}</p>
+      </Container>
+
+      <Container className={styles.wrap}>
+        {posts.length === 0 ? (
+          <p className={styles.empty}>{dict.blogPage.empty}</p>
+        ) : (
+          <ul className={styles.grid}>
+            {posts.map((post) => {
+              const c = post.content[lang as Locale];
+              return (
+                <li key={post.slug}>
+                  <Card
+                    as={Link}
+                    href={`/${lang}/blog/${post.slug}`}
+                    interactive
+                    className={styles.card}
+                  >
+                    <div className={styles.cardMeta}>
+                      <span className={styles.category}>
+                        {post.category[lang as Locale]}
+                      </span>
+                      <span className={styles.date}>
+                        {formatDate(post.date, lang as Locale)}
+                      </span>
+                      <span className={styles.readingTime}>
+                        {getReadingMinutes(c.body)} {dict.blogPage.readingTimeSuffix}
+                      </span>
+                    </div>
+                    <h2 className={styles.cardTitle}>{c.title}</h2>
+                    <p className={styles.cardExcerpt}>{c.excerpt}</p>
+                    <span className={styles.readMore}>
+                      {dict.blogPage.readMore} →
+                    </span>
+                  </Card>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </Container>
+    </>
   );
 }

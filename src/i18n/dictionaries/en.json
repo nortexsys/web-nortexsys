@@ -112,10 +112,19 @@
   },
   "blogPage": {
     "metaTitle": "Blog",
+    "metaDescription": "Ideas and lessons on custom software, agentic AI and digital transformation, from consultancy Nortex Systems.",
     "title": "Blog",
-    "lead": "Coming soon",
-    "body": "We are preparing content on custom software, agentic AI and digital transformation. Check back soon.",
-    "cta": "In the meantime, tell us about your project"
+    "lead": "Ideas, case notes and lessons from the field: custom software, agentic AI and digital transformation.",
+    "empty": "We're preparing the first articles. Check back soon.",
+    "readMore": "Read article",
+    "back": "Back to blog",
+    "publishedOn": "Published on",
+    "readingTimeSuffix": "min read",
+    "ctaTitle": "Have a project in mind?",
+    "ctaBody": "Tell us what you need and we'll tell you, with rigor, if we can help.",
+    "ctaButton": "Let's talk",
+    "notFoundTitle": "Article not found",
+    "notFoundBody": "The link may be old, or the article may have moved."
   },
   "servicesPage": {
     "metaTitle": "Services",

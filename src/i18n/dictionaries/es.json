@@ -112,10 +112,19 @@
   },
   "blogPage": {
     "metaTitle": "Blog",
+    "metaDescription": "Ideas y aprendizajes sobre software a medida, IA agéntica y transformación digital, desde la consultora Nortex Systems.",
     "title": "Blog",
-    "lead": "Pronto publicaremos",
-    "body": "Estamos preparando contenidos sobre software a medida, IA agéntica y transformación digital. Vuelve pronto.",
-    "cta": "Mientras tanto, cuéntanos tu proyecto"
+    "lead": "Ideas, casos y aprendizajes desde el terreno: software a medida, IA agéntica y transformación digital.",
+    "empty": "Estamos preparando los primeros artículos. Vuelve pronto.",
+    "readMore": "Leer artículo",
+    "back": "Volver al blog",
+    "publishedOn": "Publicado el",
+    "readingTimeSuffix": "min de lectura",
+    "ctaTitle": "¿Tienes un proyecto en mente?",
+    "ctaBody": "Cuéntanos qué necesitas y te decimos, con rigor, si podemos ayudarte.",
+    "ctaButton": "Hablemos",
+    "notFoundTitle": "Artículo no encontrado",
+    "notFoundBody": "Puede que el enlace sea antiguo o que el artículo se haya movido."
   },
   "servicesPage": {
     "metaTitle": "Servicios",

@@ -26,7 +26,7 @@ El método propietario **Nortex 5D** (Discover → Define → Design → Deliver
 - Sin área privada, login ni almacenamiento de datos de usuario.
 - Bilingüe ES (por defecto) / EN, mismas 10 rutas en ambos idiomas (20 páginas construidas).
 - Sedes: España (Fawalt Investment S.L., Madrid) y Latam (Fawalt Investment S.L., Panamá).
-- Blog reservado en navegación como placeholder ("Pronto publicaremos"); sin CMS ni contenido en esta fase.
+- Blog implementado (29/07/2026) como contenido estático en repo (`src/content/blog/posts.tsx`, mismo patrón que las páginas legales): listado + página de artículo con cabecera de marca fija. Sin CMS, sin base de datos, sin login — publicar = añadir un post al archivo y desplegar. Sigue dentro de Perfil A.
 - Stack: Next.js 15 (App Router) + React 19 + TypeScript, CSS Modules, i18n por rutas `[lang]`.
 
 ## Capabilities and Constraints
@@ -56,7 +56,7 @@ El método propietario **Nortex 5D** (Discover → Define → Design → Deliver
 - El rigor del método 5D es la prueba de credibilidad, no un adorno: cualquier superficie debe reforzar la idea de proceso disciplinado y auditable.
 - El contenido de servicios, misión, valores y metodología no se reformula en significado respecto al brief; solo se edita por longitud/formato web.
 - Paridad estricta ES/EN: misma estructura y contenido en ambos idiomas.
-- Perfil A por diseño: no se añaden funcionalidades de backend (CMS, login, blog funcional) que no estén ya decididas.
+- Perfil A por diseño: no se añaden funcionalidades de backend (CMS, login, base de datos) que no estén ya decididas. El blog es contenido estático, no una excepción a esta regla.
 
 ## Accessibility & Inclusion
 

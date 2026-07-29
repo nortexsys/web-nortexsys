@@ -101,13 +101,30 @@ Bloques:
 **Origen del contenido:** aportado por el cliente (aclaración del PO, 23/07/2026).
 
 ### Blog (`/blog`)
-**Objetivo:** reservar la sección en navegación sin comprometer alcance de esta fase.
+> **Actualización (29/07/2026):** esta sección queda superada por la decisión
+> siguiente. El blog pasó de placeholder a implementado, manteniéndose dentro
+> de Perfil A (ver nota más abajo).
+
+**Objetivo (actualizado):** publicar artículos propios sobre software a medida,
+IA agéntica y transformación digital, reforzando la imagen de marca. Sin redes
+sociales activas todavía; cuando existan, los mismos artículos se
+republicarán en LinkedIn de la empresa.
 
 Bloques:
-1. Página placeholder con mensaje "Pronto publicaremos" (o equivalente en inglés: "Coming soon").
-2. Sin listado de artículos, sin CMS, sin lógica de publicación.
+1. Listado de entradas (`/blog`) con tarjetas: categoría, fecha, título, extracto.
+2. Página de artículo (`/blog/[slug]`) con cabecera de marca fija e idéntica en
+   todas las entradas (categoría, título, fecha), y cuerpo de texto libre que
+   admite imágenes intercaladas donde el autor decida (sin imagen de portada
+   obligatoria).
+3. **Sigue dentro de Perfil A:** el contenido es estático, definido en
+   `src/content/blog/posts.tsx` (mismo patrón que los documentos legales en
+   `src/content/legal/`). No hay CMS, panel de administración, base de datos
+   ni login. Publicar una entrada nueva = añadir un objeto al archivo +
+   deploy.
 
-**Origen del contenido:** a redactar (una frase). Fuera de alcance de Perfil A el desarrollo de blog funcional; se marca como pendiente de decisión futura sobre plataforma (posible Perfil B si requiere backend de contenido).
+**Origen del contenido:** redactado por el equipo/agente a partir del
+posicionamiento y servicios ya aprobados en esta spec (método 5D, software a
+medida, IA agéntica). Sujeto a revisión del PO antes de publicar.
 
 ### Contacto (`/contacto`)
 **Objetivo:** convertir la visita en lead.
@@ -142,7 +159,7 @@ Bloques:
 
 **Específicos de este proyecto:**
 - Las 10 páginas del sitio (Home, Quiénes somos, Metodología 5D, Servicios, Dónde estamos, Blog, Contacto, Aviso legal, Privacidad, Cookies) están publicadas en español e inglés, con el mismo contenido y estructura en ambos idiomas. Esto equivale a 20 páginas construidas en total (10 rutas × 2 idiomas).
-- La página `/blog` existe, está enlazada desde la navegación y muestra el mensaje "Pronto publicaremos" en ambos idiomas, sin enlaces rotos ni funcionalidad adicional.
+- La página `/blog` existe, está enlazada desde la navegación y muestra el listado de artículos publicados (contenido estático, ES/EN), cada uno con su propia página `/blog/[slug]` y cabecera de marca fija, sin enlaces rotos. *(Actualizado 29/07/2026 — ver sección 2, Blog.)*
 - El diagrama de flujo de la metodología 5D muestra las 5 fases en orden, con título y subtítulo correctos según el brief, y es legible tanto en escritorio como en móvil (verificable visualmente en ambos breakpoints).
 - La página Dónde estamos muestra las dos sedes (España y Panamá) con su dirección completa y un enlace funcional a Google Maps que abre la ubicación correcta de cada una.
 - Las páginas legales (Aviso legal, Privacidad, Cookies) están publicadas y enlazadas desde el pie de página en todas las páginas del sitio.
@@ -163,7 +180,7 @@ En orden de dependencia. Cada tarea es una unidad de trabajo ejecutable de forma
 7. Diseñar e implementar el diagrama de flujo de las 5 fases (componente visual, estética tecnológica, responsive).
 8. Construir página Servicios con los 9 bloques de servicio, con navegación interna (anclas o acordeón).
 9. Construir página Dónde estamos con las dos sedes y sus mapas.
-10. Construir página Blog placeholder ("Pronto publicaremos", ES/EN).
+10. Construir página Blog: listado (`/blog`) y artículo (`/blog/[slug]`), contenido estático ES/EN, cabecera de marca fija por entrada. *(Actualizado 29/07/2026 — sustituye al placeholder original.)*
 11. Construir página Contacto: formulario, validación, envío a contact@nortexsys.com, protección anti-spam, mensaje de confirmación.
 12. Redactar y publicar páginas legales (Aviso legal, Privacidad, Cookies) con los datos de Fawalt Investment S.L. *(Marcada como pendiente de escalado — ver sección 5, implicación legal sin resolver).*
 13. Añadir al pie de página los enlaces a Aviso legal, Privacidad y Cookies. *(Depende de la tarea 12).*
@@ -180,7 +197,7 @@ En orden de dependencia. Cada tarea es una unidad de trabajo ejecutable de forma
 
 - **Páginas legales (Aviso legal, Privacidad, Cookies):** el brief indica "No" en registro de detalles adicionales y no aporta textos legales. Esta es una implicación legal sin resolver (tratamiento de datos del formulario, cookies de analítica) — requiere que el PO apruebe el texto legal antes de publicar, o indique quién lo redacta/revisa.
 - **Analítica:** resuelto — se implementa Google Analytics (gratuito). No se contratará ninguna herramienta de pago para esta web por el momento.
-- **Blog:** confirmado que se pospone. Cuando se aborde, previsiblemente exige revisar si sigue siendo Perfil A (contenido estático en repo) o pasa a Perfil B (CMS con backend) — decisión a tomar en su momento, no ahora.
+- **Blog:** *(Actualizado 29/07/2026)* implementado como contenido estático en repo (`src/content/blog/posts.tsx`), sin CMS ni backend — se mantiene en Perfil A, no fue necesario escalar a Perfil B.
 - **Objetivo verificable de la web:** "obtener clientes y visitas" no es un criterio que se pueda dar por cumplido o no a los 6 meses, porque no fija una cifra. Al ser Nortex una empresa nueva, tampoco hay una línea base propia con la que comparar el resultado. Se necesita del PO una cifra concreta — por ejemplo, un número de contactos cualificados al mes a través del formulario — para poder fijarlo como criterio de aceptación del negocio (no de la construcción técnica).
 
 ---
