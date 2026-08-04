@@ -3,7 +3,7 @@ import { locales } from "@/i18n/config";
 import { blogPosts } from "@/content/blog/posts";
 
 // Production origin. Override in production via NEXT_PUBLIC_SITE_URL.
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://nortexsys.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.nortexsys.com";
 
 // Page paths under each locale.
 const PATHS = [

@@ -1,8 +1,20 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { locales, defaultLocale } from "@/i18n/config";
 
+const CANONICAL_HOST = "www.nortexsys.com";
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // Canonicalize domain: force www, avoid duplicate-content across hosts.
+  const host = request.headers.get("host") ?? "";
+  if (host && host !== CANONICAL_HOST && /(^|\.)nortexsys\.com$/.test(host)) {
+    const url = request.nextUrl.clone();
+    url.host = CANONICAL_HOST;
+    url.port = "";
+    url.protocol = "https";
+    return NextResponse.redirect(url, 308);
+  }
 
   // Skip Next internals and static assets
   if (
