@@ -489,6 +489,102 @@ export const blogPosts: BlogPost[] = [
       },
     },
   },
+  {
+    slug: "automatizacion-extracto-bancario",
+    date: "2026-09-13",
+    category: { es: "Automatización", en: "Automation" },
+    content: {
+      es: {
+        title: "Automatizar la conciliación de extractos bancarios en PDF",
+        excerpt:
+          "Un cliente insertaba a mano entre 10 y 15 movimientos bancarios al día en su ERP. Un script de conciliación se lo redujo a un clic.",
+        body: (
+          <>
+            <h2>Caso de negocio</h2>
+            <p>
+              El cliente procesaba a mano los extractos que recibía de su
+              banco en formato PDF. Cada movimiento había que insertarlo
+              manualmente en el ERP y, después, comprobar que el saldo
+              inicial y el final cuadraban. El proceso en sí era sencillo,
+              pero tedioso: cinco campos por movimiento, entre 10 y 15 líneas
+              al día, con el riesgo de error que trae el cansancio de repetir
+              la misma tarea decenas de veces.
+            </p>
+            <h2>Solución propuesta</h2>
+            <p>
+              Un script en Python que lee directamente los archivos PDF e
+              inserta los registros en el ERP, ejecutado a demanda del
+              usuario cuando le llega un extracto nuevo.
+            </p>
+            <h2>Aplicación desarrollada</h2>
+            <p>
+              Una app de escritorio, para Windows y Mac, con este aspecto:
+            </p>
+            <img
+              src="/blog/automatizacion-extracto-bancario-app.png"
+              alt="Interfaz de la app de conciliación de extractos bancarios"
+            />
+            <ul>
+              <li>El usuario elige la carpeta donde guarda los PDFs a procesar.</li>
+              <li>La aplicación detecta el contenido de cada PDF, identifica a qué tabla corresponde (cada extracto está vinculado a un número de cuenta) y cuántas líneas tiene.</li>
+              <li>Si al procesar el extracto encuentra líneas que ya estaban insertadas en el ERP, el sistema no las duplica.</li>
+              <li>La app informa cuántas líneas ha volcado, cuántas ha descartado por estar repetidas, y confirma al usuario cuándo el proceso ha terminado.</li>
+            </ul>
+            <h2>Tiempo y dinero ahorrados</h2>
+            <p>
+              El cliente procesaba unas 50 líneas por semana, con un coste en
+              tiempo de una hora. La automatización le ahorra unas 4
+              horas al mes, el equivalente a unos 300 euros de coste
+              empresa.
+            </p>
+          </>
+        ),
+      },
+      en: {
+        title: "Automating bank statement reconciliation from PDF",
+        excerpt:
+          "A client was manually entering 10 to 15 bank transactions a day into their ERP. A reconciliation script turned that into a single click.",
+        body: (
+          <>
+            <h2>Business case</h2>
+            <p>
+              The client manually processed the bank statements they
+              received in PDF format. Every transaction had to be entered by
+              hand into the ERP, then checked so the opening and closing
+              balances matched. The process itself was simple but tedious:
+              five fields per transaction, 10 to 15 lines a day, with the
+              error risk that comes from repeating the same task dozens of
+              times while tired.
+            </p>
+            <h2>Proposed solution</h2>
+            <p>
+              A Python script that reads the PDF files directly and inserts
+              the records into the ERP, run on demand whenever the user
+              receives a new statement.
+            </p>
+            <h2>The application</h2>
+            <p>A desktop app, for Windows and Mac, that looks like this:</p>
+            <img
+              src="/blog/automatizacion-extracto-bancario-app.png"
+              alt="Bank statement reconciliation app interface"
+            />
+            <ul>
+              <li>The user picks the folder where the PDFs to process are saved.</li>
+              <li>The app reads each PDF, identifies which table it belongs to (each statement is linked to an account number) and how many lines it contains.</li>
+              <li>If it finds lines already inserted in the ERP, the system skips them instead of duplicating them.</li>
+              <li>The app reports how many lines it inserted, how many it skipped as duplicates, and confirms to the user once the process is complete.</li>
+            </ul>
+            <h2>Time and money saved</h2>
+            <p>
+              The client was processing about 50 lines a week, at a cost of
+              one hour of work. The automation saves roughly 4 hours a
+              month — about 300 euros in company cost.
+            </p>
+          </>
+        ),
+      },
+    },
+  },
 ];
 
 export function getSortedBlogPosts(): BlogPost[] {
