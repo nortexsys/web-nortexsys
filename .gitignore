@@ -23,3 +23,7 @@ Thumbs.db
 
 .vercel
 .env*
+
+# Exports de formularios con datos de contacto
+Brief*.csv
+*Submissions*.csv

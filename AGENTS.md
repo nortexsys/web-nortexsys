@@ -36,7 +36,8 @@ estándares viven en el repo de infraestructura y se referencian desde aquí:
 ### Documentos fuente de este proyecto
 - `fase2-define-spec.md` — **spec aprobada, fuente de verdad del producto.**
 - `docs/fase3-diseno-entregable.md` — lo construido en Fase 3 (sistema visual + Home).
-- `Brief Web_Submissions_2026-07-23.csv` — brief cerrado del cliente (paleta, logo, copy).
+- Brief cerrado del cliente (paleta, logo, copy): se guarda fuera del repositorio, porque
+  el export del formulario lleva datos de contacto. Pídelo al responsable del proyecto.
 
 ### Estado
 - **Fase 3 (Diseño):** ✅ cerrada y aprobada por el PO.
