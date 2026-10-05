@@ -326,6 +326,13 @@
       "cta": "Hablemos de tu proyecto"
     }
   },
+  "consent": {
+    "text": "Usamos cookies analíticas (Google Analytics) solo si las aceptas, para entender cómo se usa la web y mejorarla.",
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "policy": "Política de cookies",
+    "settings": "Preferencias de cookies"
+  },
   "footer": {
     "legalNote": "Nortex Systems es la marca comercial bajo la cual Fawalt Investment S.L. presta el servicio.",
     "legal": "Aviso legal",

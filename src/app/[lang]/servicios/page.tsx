@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/site";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
 import { Container } from "@/components/ui/Container";
@@ -78,9 +79,7 @@ export async function generateMetadata({
   return {
     title: dict.servicesPage.metaTitle,
     description: dict.servicesPage.metaDescription,
-    alternates: {
-      languages: { es: "/es/servicios", en: "/en/servicios" },
-    },
+    alternates: pageAlternates(lang, "servicios"),
   };
 }
 

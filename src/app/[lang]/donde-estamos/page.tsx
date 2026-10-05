@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_URL, pageAlternates } from "@/lib/site";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
 import { Container } from "@/components/ui/Container";
@@ -18,9 +19,7 @@ export async function generateMetadata({
   return {
     title: dict.locationPage.metaTitle,
     description: dict.locationPage.metaDescription,
-    alternates: {
-      languages: { es: "/es/donde-estamos", en: "/en/donde-estamos" },
-    },
+    alternates: pageAlternates(lang, "donde-estamos"),
   };
 }
 
@@ -42,16 +41,16 @@ export default async function LocationPage({
           "@graph": [
             {
               "@type": "Organization",
-              "@id": "https://nortexsys.com/#organization",
+              "@id": `${SITE_URL}/#organization`,
               name: "Nortex Systems",
-              url: "https://nortexsys.com",
+              url: SITE_URL,
               email: "contact@nortexsys.com",
               telephone: "+34673764987",
             },
             {
               "@type": "LocalBusiness",
               name: "Nortex Systems — España",
-              parentOrganization: { "@id": "https://nortexsys.com/#organization" },
+              parentOrganization: { "@id": `${SITE_URL}/#organization` },
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Calle Núñez de Balboa, 118, 1i",
@@ -63,7 +62,7 @@ export default async function LocationPage({
             {
               "@type": "LocalBusiness",
               name: "Nortex Systems — Latam",
-              parentOrganization: { "@id": "https://nortexsys.com/#organization" },
+              parentOrganization: { "@id": `${SITE_URL}/#organization` },
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Calle Anastasio Ruiz, oficina E-9, corregimiento de Bella Vista",
@@ -74,7 +73,7 @@ export default async function LocationPage({
             {
               "@type": "LocalBusiness",
               name: "Nortex Systems — United States",
-              parentOrganization: { "@id": "https://nortexsys.com/#organization" },
+              parentOrganization: { "@id": `${SITE_URL}/#organization` },
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "320 E Yavapai Rd, Apt 1205",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/site";
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { Container } from "@/components/ui/Container";
@@ -28,12 +29,7 @@ export async function generateMetadata({
       lang === "en"
         ? { index: true, follow: true }
         : { index: false, follow: true },
-    alternates: {
-      languages: {
-        es: "/es/principios-ingenieria",
-        en: "/en/principios-ingenieria",
-      },
-    },
+    alternates: pageAlternates(lang, "principios-ingenieria"),
   };
 }
 

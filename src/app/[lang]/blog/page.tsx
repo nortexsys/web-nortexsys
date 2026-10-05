@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/site";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
 import { Card } from "@/components/ui/Card";
@@ -17,9 +18,7 @@ export async function generateMetadata({
   return {
     title: dict.blogPage.metaTitle,
     description: dict.blogPage.metaDescription,
-    alternates: {
-      languages: { es: "/es/blog", en: "/en/blog" },
-    },
+    alternates: pageAlternates(lang, "blog"),
   };
 }
 

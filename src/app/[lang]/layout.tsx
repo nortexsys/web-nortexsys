@@ -5,6 +5,8 @@ import { locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { Consent } from "@/components/analytics/Consent";
+import { SITE_URL } from "@/lib/site";
 import "@/styles/globals.css";
 
 // Open Sans across the entire site — sans-serif everywhere, matching the
@@ -39,9 +41,7 @@ export async function generateMetadata({
     description: isEs
       ? "Consultora de software a medida, IA agéntica y transformación digital. Convertimos necesidades poco definidas en soluciones con rigor, procesos claros y resultados medibles."
       : "Custom software, agentic AI and digital transformation consultancy. We turn poorly defined needs into solutions built with rigor, clear processes and measurable results.",
-    metadataBase: new URL(
-      process.env.NEXT_PUBLIC_SITE_URL ?? "https://nortexsys.com"
-    ),
+    metadataBase: new URL(SITE_URL),
     openGraph: {
       type: "website",
       siteName: "Nortex Systems",
@@ -55,6 +55,14 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
+    },
+    // Site-ownership tokens for Search Console / Bing Webmaster Tools. Only
+    // emitted when the env var is set (DNS verification needs no tag).
+    verification: {
+      google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+      other: process.env.NEXT_PUBLIC_BING_VERIFICATION
+        ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION }
+        : undefined,
     },
   };
 }
@@ -77,6 +85,7 @@ export default async function LangLayout({
         <Header dict={dict} lang={lang as Locale} />
         <main id="main">{children}</main>
         <Footer dict={dict} lang={lang as Locale} />
+        <Consent labels={dict.consent} policyHref={`/${lang}/cookies`} />
       </body>
     </html>
   );

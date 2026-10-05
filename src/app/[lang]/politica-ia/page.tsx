@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/site";
 import type { Locale } from "@/i18n/config";
 import { LegalDoc } from "@/components/legal/LegalDoc";
 import {
@@ -18,9 +19,7 @@ export async function generateMetadata({
     title: aiActTitle[lang as Locale],
     description: aiActMetaDescription[lang as Locale],
     robots: { index: true, follow: true },
-    alternates: {
-      languages: { es: "/es/politica-ia", en: "/en/politica-ia" },
-    },
+    alternates: pageAlternates(lang, "politica-ia"),
   };
 }
 

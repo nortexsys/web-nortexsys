@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
@@ -7,6 +8,7 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { SITE_URL, pageAlternates } from "@/lib/site";
 import styles from "./home.module.css";
 
 // Map service icon id (from dictionary) to icon name.
@@ -30,6 +32,15 @@ const phaseIcons: Record<string, IconName> = {
   D4: "deliver",
   D5: "demonstrate",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return { alternates: pageAlternates(lang) };
+}
 
 export default async function HomePage({
   params,
@@ -57,8 +68,8 @@ export default async function HomePage({
           "@type": "Organization",
           name: "Nortex Systems",
           alternateName: "Fawalt Investment S.L.",
-          url: "https://nortexsys.com",
-          logo: "https://nortexsys.com/brand/LOGO_Nortex.png",
+          url: SITE_URL,
+          logo: `${SITE_URL}/brand/LOGO_Nortex.png`,
           description: dict.meta.tagline,
           email: "contact@nortexsys.com",
           telephone: "+34673764987",

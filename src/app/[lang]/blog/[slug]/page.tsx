@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/site";
 import { notFound } from "next/navigation";
 import type { Locale } from "@/i18n/config";
 import { locales } from "@/i18n/config";
@@ -29,9 +30,7 @@ export async function generateMetadata({
   return {
     title: c.title,
     description: c.excerpt,
-    alternates: {
-      languages: { es: `/es/blog/${slug}`, en: `/en/blog/${slug}` },
-    },
+    alternates: pageAlternates(lang, `blog/${slug}`),
     openGraph: {
       type: "article",
       title: c.title,
