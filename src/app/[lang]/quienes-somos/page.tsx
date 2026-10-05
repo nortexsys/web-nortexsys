@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { pageAlternates } from "@/lib/site";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
@@ -32,6 +33,7 @@ export default async function AboutPage({
 
   return (
     <>
+      <Breadcrumbs lang={lang} homeName={dict.meta.siteName} name={dict.nav.about} path="quienes-somos" />
       {/* 1 · Intro */}
       <Container className={styles.intro}>
         <h1>{dict.about.intro.title}</h1>

@@ -61,6 +61,15 @@ export default async function HomePage({
 
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Nortex Systems",
+          url: SITE_URL,
+          inLanguage: lang,
+        }}
+      />
       {/* Structured data — Organization (schema.org) */}
       <JsonLd
         data={{
