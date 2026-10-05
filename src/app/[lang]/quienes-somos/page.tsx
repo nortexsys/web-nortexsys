@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/site";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
 import { Container } from "@/components/ui/Container";
@@ -17,9 +18,7 @@ export async function generateMetadata({
   return {
     title: dict.about.metaTitle,
     description: dict.about.metaDescription,
-    alternates: {
-      languages: { es: "/es/quienes-somos", en: "/en/quienes-somos" },
-    },
+    alternates: pageAlternates(lang, "quienes-somos"),
   };
 }
 

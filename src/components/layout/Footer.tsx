@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Dict } from "@/i18n/dict-type";
+import { ConsentSettingsButton } from "@/components/analytics/Consent";
 import styles from "./Footer.module.css";
 
 export function Footer({
@@ -32,6 +33,7 @@ export function Footer({
           <Link href={`/${lang}/aviso-legal`}>{dict.footer.legal}</Link>
           <Link href={`/${lang}/privacidad`}>{dict.footer.privacy}</Link>
           <Link href={`/${lang}/cookies`}>{dict.footer.cookies}</Link>
+          <ConsentSettingsButton label={dict.consent.settings} />
           <Link href={`/${lang}/politica-ia`}>{dict.footer.aiPolicy}</Link>
           <Link href={`/${lang}/principios-ingenieria`}>{dict.footer.engineeringPrinciples}</Link>
         </nav>

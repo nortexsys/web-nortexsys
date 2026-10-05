@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/site";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
 import { Container } from "@/components/ui/Container";
@@ -15,9 +16,7 @@ export async function generateMetadata({
   return {
     title: dict.contactPage.metaTitle,
     description: dict.contactPage.metaDescription,
-    alternates: {
-      languages: { es: "/es/contacto", en: "/en/contacto" },
-    },
+    alternates: pageAlternates(lang, "contacto"),
   };
 }
 
