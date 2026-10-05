@@ -1,5 +1,6 @@
 import { Fragment, type CSSProperties } from "react";
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { pageAlternates } from "@/lib/site";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
@@ -64,6 +65,7 @@ export default async function MethodPage({
 
   return (
     <>
+      <Breadcrumbs lang={lang} homeName={dict.meta.siteName} name={dict.nav.method} path="metodologia" />
       {/* 1 · Intro + 2 · Flow diagram, side by side from 960px: text column
           (capped at 60ch, same measure as .lead) and the wheel filling the
           remaining width to the right — vertical list + stacked intro on

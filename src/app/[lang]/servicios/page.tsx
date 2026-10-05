@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { SITE_URL, pageAlternates } from "@/lib/site";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
 import { Container } from "@/components/ui/Container";
@@ -94,6 +96,25 @@ export default async function ServicesPage({
 
   return (
     <>
+      <Breadcrumbs lang={lang} homeName={dict.meta.siteName} name={dict.nav.services} path="servicios" />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          itemListElement: blocks.map((b, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            item: {
+              "@type": "Service",
+              name: b.title,
+              description: b.target,
+              serviceType: b.title,
+              provider: { "@type": "Organization", name: "Nortex Systems", url: SITE_URL },
+              url: `${SITE_URL}/${lang}/servicios`,
+            },
+          })),
+        }}
+      />
       {/* Intro */}
       <Container className={styles.intro}>
         <h1>{dict.servicesPage.title}</h1>

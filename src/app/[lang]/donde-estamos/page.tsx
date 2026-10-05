@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { SITE_URL, pageAlternates } from "@/lib/site";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
@@ -34,6 +35,7 @@ export default async function LocationPage({
 
   return (
     <>
+      <Breadcrumbs lang={lang} homeName={dict.meta.siteName} name={dict.nav.location} path="donde-estamos" />
       {/* Structured data — Organization with LocalBusiness offices (@graph) */}
       <JsonLd
         data={{

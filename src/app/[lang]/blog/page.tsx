@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { pageAlternates } from "@/lib/site";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
@@ -41,6 +42,7 @@ export default async function BlogPage({
 
   return (
     <>
+      <Breadcrumbs lang={lang} homeName={dict.meta.siteName} name={dict.nav.blog} path="blog" />
       <Container className={styles.intro}>
         <h1>{dict.blogPage.title}</h1>
         <p className={styles.lead}>{dict.blogPage.lead}</p>

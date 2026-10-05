@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { pageAlternates } from "@/lib/site";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionary";
@@ -31,6 +32,7 @@ export default async function ContactPage({
 
   return (
     <>
+      <Breadcrumbs lang={lang} homeName={dict.meta.siteName} name={dict.nav.contact} path="contacto" />
       <Container className={styles.intro}>
         <h1>{dict.contactPage.title}</h1>
         <p className={styles.lead}>{dict.contactPage.lead}</p>
