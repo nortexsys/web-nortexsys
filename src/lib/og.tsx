@@ -1,6 +1,5 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 import { ImageResponse } from "next/og";
+import { OG_LOGO_DATA_URI } from "@/lib/og-logo";
 
 export const ogSize = { width: 1200, height: 630 };
 
@@ -19,8 +18,7 @@ const COPY = {
 // logo, headline and the production host.
 export async function renderOg(lang: string) {
   const copy = COPY[lang === "en" ? "en" : "es"];
-  const logo = await readFile(join(process.cwd(), "public/brand/LOGO_Nortex.png"));
-  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
+  const logoSrc = OG_LOGO_DATA_URI;
 
   return new ImageResponse(
     (
