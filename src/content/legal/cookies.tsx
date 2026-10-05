@@ -5,8 +5,8 @@ import type { Locale } from "@/i18n/config";
 // Do not edit the legal meaning without PO/legal review.
 
 export const cookiesUpdatedAt = {
-  es: "Última actualización: 25 de julio de 2026",
-  en: "Last updated: July 25, 2026",
+  es: "Última actualización: 5 de octubre de 2026",
+  en: "Last updated: October 5, 2026",
 };
 
 export const cookiesTitle = { es: "Política de Cookies", en: "Cookies Policy" };
@@ -45,23 +45,36 @@ export const cookiesSections: Record<
       ),
     },
     {
-      title: "3. Situación actual y tipos de cookies",
+      title: "3. Cookies utilizadas",
       body: (
         <>
           <p>
-            Actualmente este sitio web <strong>no instala cookies de análisis,
-            preferencias ni publicidad</strong>. Únicamente pueden emplearse
-            cookies o mecanismos técnicos estrictamente necesarios para el
-            funcionamiento del sitio (por ejemplo, seguridad o gestión básica de
-            sesión), que no requieren consentimiento.
+            Este sitio web utiliza <strong>cookies técnicas</strong>,
+            necesarias para su funcionamiento (por ejemplo, seguridad o
+            recordar tu elección sobre cookies), que no requieren
+            consentimiento.
           </p>
           <p>
-            Si en el futuro se incorporan cookies analíticas, de preferencias o
-            publicitarias, estas solo se instalarán tras obtener el
-            consentimiento previo del usuario a través del correspondiente
-            panel de gestión de cookies, que se habilitará antes de activar
-            dichas cookies. Esta política se actualizará en ese momento para
-            detallar cada cookie, su finalidad y su duración.
+            Además, <strong>solo si las aceptas</strong> en el panel de
+            cookies, utilizamos Google Analytics 4 para obtener estadísticas
+            agregadas sobre el uso del sitio y mejorarlo:
+          </p>
+          <ul>
+            <li>
+              <strong>_ga</strong>: distingue usuarios de forma anónima.
+              Duración: 2 años.
+            </li>
+            <li>
+              <strong>_ga_&lt;ID&gt;</strong>: mantiene el estado de la
+              sesión. Duración: 2 años.
+            </li>
+          </ul>
+          <p>
+            Proveedor: Google Ireland Limited. Los datos pueden tratarse en
+            servidores de Google fuera del Espacio Económico Europeo bajo las
+            garantías previstas en el RGPD. Google Analytics 4 no registra ni
+            almacena direcciones IP. No utilizamos cookies de preferencias ni
+            publicitarias.
           </p>
         </>
       ),
@@ -80,12 +93,12 @@ export const cookiesSections: Record<
       title: "5. Gestión del consentimiento",
       body: (
         <p>
-          Mientras el sitio no instale cookies no técnicas, no se requiere
-          recabar consentimiento y no se muestra panel de configuración. En
-          cuanto se incorpore alguna cookie analítica, de preferencias o
-          publicitaria, el usuario podrá aceptarla, rechazarla o configurar sus
-          preferencias antes de que se instale, y podrá modificar o retirar su
-          consentimiento en cualquier momento.
+          Al acceder al sitio se muestra un panel donde puedes aceptar o
+          rechazar las cookies analíticas con la misma facilidad. Hasta que las
+          aceptes no se carga Google Analytics ni se instala ninguna cookie
+          analítica. Puedes cambiar o retirar tu consentimiento en cualquier
+          momento desde el enlace «Preferencias de cookies» del pie de página;
+          al rechazarlas se eliminan las cookies analíticas ya instaladas.
         </p>
       ),
     },
@@ -144,23 +157,34 @@ export const cookiesSections: Record<
       ),
     },
     {
-      title: "3. Current status and types of cookies",
+      title: "3. Cookies we use",
       body: (
         <>
           <p>
-            This website currently <strong>does not install analytical,
-            preference or advertising cookies</strong>. Only strictly
-            necessary technical cookies or mechanisms may be used (for
-            example, security or basic session management), which do not
-            require consent.
+            This website uses <strong>technical cookies</strong>, necessary
+            for it to work (for example, security or remembering your cookie
+            choice), which do not require consent.
           </p>
           <p>
-            If analytical, preference or advertising cookies are added in the
-            future, they will only be installed after obtaining the user's
-            prior consent through the corresponding cookie management panel,
-            which will be enabled before such cookies are activated. This
-            policy will be updated at that time to detail each cookie, its
-            purpose and its duration.
+            In addition, <strong>only if you accept them</strong> in the
+            cookie panel, we use Google Analytics 4 to obtain aggregated
+            statistics about how the site is used and to improve it:
+          </p>
+          <ul>
+            <li>
+              <strong>_ga</strong>: distinguishes users anonymously.
+              Duration: 2 years.
+            </li>
+            <li>
+              <strong>_ga_&lt;ID&gt;</strong>: keeps session state.
+              Duration: 2 years.
+            </li>
+          </ul>
+          <p>
+            Provider: Google Ireland Limited. Data may be processed on Google
+            servers outside the European Economic Area under the safeguards
+            provided for in the GDPR. Google Analytics 4 does not log or store
+            IP addresses. We do not use preference or advertising cookies.
           </p>
         </>
       ),
@@ -179,12 +203,12 @@ export const cookiesSections: Record<
       title: "5. Consent management",
       body: (
         <p>
-          As long as the website does not install non-technical cookies, no
-          consent needs to be collected and no configuration panel is shown.
-          As soon as any analytical, preference or advertising cookie is
-          added, the user will be able to accept it, reject it, or configure
-          their preferences before it is installed, and may modify or
-          withdraw their consent at any time.
+          When you visit the site a panel lets you accept or reject analytics
+          cookies with equal ease. Until you accept, Google Analytics is not
+          loaded and no analytics cookie is installed. You can change or
+          withdraw your consent at any time from the “Cookie settings” link in
+          the footer; rejecting them deletes any analytics cookies already
+          installed.
         </p>
       ),
     },
