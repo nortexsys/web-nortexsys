@@ -50,8 +50,8 @@ export async function generateMetadata({
         ? "Nortex Systems — Software a medida · IA agéntica"
         : "Nortex Systems — Custom software · Agentic AI",
       description: isEs
-        ? "Consultora de software a medida, IA agéntica y transformación digital."
-        : "Custom software, agentic AI and digital transformation consultancy.",
+        ? "Consultora de software a medida, IA agéntica y transformación digital. Convertimos necesidades poco definidas en soluciones con rigor, procesos claros y resultados medibles."
+        : "Custom software, agentic AI and digital transformation consultancy. We turn poorly defined needs into solutions built with rigor, clear processes and measurable results.",
     },
     twitter: {
       card: "summary_large_image",
