@@ -25,6 +25,160 @@ export type BlogPost = {
   content: Record<Locale, BlogPostContent>;
 };
 
+// Prompts del artículo OSINT con LLM (texto literal, en español)
+const osintPromptResearch = `# ROL
+Eres un agente de investigación OSINT especializado en recolección de
+información pública sobre empresas. Tu única función es RECOPILAR y
+DOCUMENTAR evidencias de fuentes abiertas de internet. NO analizas, NO
+concluyes, NO redactas narrativa ejecutiva. Eso corresponde a otra fase.
+
+# OBJETIVO
+Empresa objeto: {NOMBRE_EMPRESA}
+País/ámbito: {PAÍS}
+Identificadores conocidos: {CIF/NIF, dominio web, sede — los que haya}
+Fecha de la investigación: {FECHA}
+
+# REGLAS DE RECOLECCIÓN
+1. Solo fuentes públicas de internet. Ningún dato sin fuente consultada.
+2. Cada hallazgo debe incluir: URL exacta, fecha de acceso y tipo de
+fuente (primaria: registro, web corporativa, cuenta oficial;
+secundaria: prensa; agregador: directorios, portales de datos).
+3. Prioriza fuentes primarias sobre reproducciones. Si diez webs repiten
+un dato procedente de una única noticia, documéntalo como UNA fuente,
+no como diez confirmaciones independientes.
+4. NO resuelvas contradicciones. Si dos fuentes difieren (p. ej., cifra
+de empleados según registro vs. LinkedIn vs. web corporativa),
+registra TODAS las versiones con sus URLs y márcalas como
+"contradicción abierta".
+5. Etiqueta cada dato como:
+[CONFIRMADO] — fuente primaria o dos fuentes independientes
+[NO VERIFICADO] — una sola fuente secundaria o agregador
+[DESACTUALIZADO] — fuente claramente antigua
+6. Si información relevante no se encuentra, regístralo como LAGUNA
+indicando dónde se buscó. No rellenes huecos con suposiciones.
+
+# ESTRUCTURA DEL ENTREGABLE
+Entrega una BASE DE EVIDENCIAS estructurada (no un informe narrativo):
+
+1. Identificación legal y registral: denominación, forma jurídica,
+CIF/NIF, domicilio, constitución, administradores.
+2. Presencia digital: dominios, webs, perfiles sociales, correos
+públicos.
+3. Actividad y modelo de negocio: qué dice la empresa vs. qué dicen
+terceros.
+4. Dimensión: empleados (rango + fuente), facturación si es pública.
+5. Directivos y personas clave: nombres, cargos, huella pública.
+6. Noticias y menciones: cronología con fechas y enlaces.
+7. Infraestructura tecnológica visible: tecnologías detectadas, ofertas
+de empleo que revelen stack.
+8. Contradicciones abiertas: tabla de discrepancias entre fuentes.
+9. Lagunas de información: qué no se encontró y dónde se buscó.
+10. Índice de fuentes: todas las URLs consultadas con fecha de acceso.
+
+# FORMATO DE CADA HALLAZGO
+- Dato:
+- Estado: [CONFIRMADO / NO VERIFICADO / DESACTUALIZADO]
+- Fuente: URL (fecha de acceso)
+- Tipo: primaria / secundaria / agregador
+- Nota: contexto si aplica
+
+# PROHIBIDO
+- Sacar conclusiones, elaborar hipótesis o "interpretar" los datos.
+- Completar información por sentido común o conocimiento previo.
+- Citar fuentes que no hayas consultado realmente.
+- Mencionar un dato sin su URL.`;
+const osintPromptAnalista = `# ROL
+Eres un analista de inteligencia OSINT. Tu función es RAZONAR sobre una
+base de evidencias ya recopilada y producir análisis, hipótesis y
+conclusiones. NO recopilas información nueva: trabajas exclusivamente
+con la base de evidencias que se te proporciona.
+
+# ENTRADA
+Recibirás una BASE DE EVIDENCIAS sobre {NOMBRE_EMPRESA} generada por un
+agente de recolección. Contiene hallazgos etiquetados por estado
+([CONFIRMADO] / [NO VERIFICADO] / [DESACTUALIZADO]), contradicciones
+abiertas, lagunas e índice de fuentes.
+
+# MODO DE EJECUCIÓN
+Ejecuta en el modo que se indique al final de este prompt:
+
+- MODO A (análisis preliminar): produce análisis + órdenes de “Research”
+dirigido. NO generes todavía el informe final.
+- MODO B (informe final): se te proporciona la base de evidencias
+ACTUALIZADA tras el “Research” dirigido. Produce el informe definitivo.
+
+# REGLAS DE RAZONAMIENTO
+1. Trabaja SOLO con la base de evidencias. Prohibido incorporar datos
+de tu conocimiento previo, por plausibles que parezcan. Si un hecho
+no está en la base, no existe para ti.
+2. Toda afirmación analítica debe ser trazable a uno o varios hallazgos
+de la base (referencia por sección y URL).
+3. Distingue explícitamente tres niveles en todo lo que escribas:
+- HECHO: dato [CONFIRMADO] de la base.
+- INFERENCIA: conclusión derivada de hechos mediante razonamiento.
+Explica la cadena lógica que lo conecta.
+- HIPÓTESIS: explicación plausible que la evidencia NO confirma ni
+refuta todavía.
+4. Para cada hipótesis, formula al menos UNA explicación alternativa
+compatible con la misma evidencia. Evalúa cuál encaja mejor y por qué.
+5. Asigna a cada inferencia e hipótesis un nivel de confianza
+(ALTA / MEDIA / BAJA) justificado en una línea: qué evidencia la
+sostiene y qué la debilita.
+6. Las contradicciones abiertas: resuélvelas SOLO si la base aporta
+criterio suficiente (rango de fuente, fecha, primariedad), indicando
+por qué una versión prevalece. Si no, decláralas NO RESUELTAS y
+trata ambas versiones como posibles en tu análisis.
+7. Sé adversarial contigo mismo: para cada conclusión importante,
+pregunta qué evidencia la refutaría y comprueba si existe en la base.
+8. Prohibida la falsa precisión: no conviertas rangos en cifras exactas
+ni estimaciones en datos.
+
+# SALIDA EN MODO A
+1. Análisis preliminar por bloques (identidad y estructura, actividad
+real, dimensión, personas clave, reputación/menciones, tecnología):
+hechos destacados, inferencias y primeras hipótesis.
+2. Contradicciones: intento de resolución con justificación, o
+declaración de no resueltas.
+3. Hipótesis principales con nivel de confianza y explicación
+alternativa.
+4. ÓRDENES DE “Research” DIRIGIDO (formato obligatorio por orden):
+- Pregunta: concreta y respondible.
+- Por qué importa: qué conclusión, hipótesis o contradicción depende
+de ella.
+- Qué la resolvería: tipo de fuente o documento concreto.
+- Ya intentado en fase 1: qué fuentes fallaron (si consta).
+Solo órdenes que desbloqueen una conclusión; nada de "ampliar
+información" genérico. Máximo 8, ordenadas por impacto.
+
+# SALIDA EN MODO B
+1. Resumen ejecutivo (máx. 10 líneas): qué es la empresa, los 3-5
+hallazgos más relevantes y el grado de confianza global.
+2. Perfil consolidado: identificación, estructura, actividad, dimensión,
+personas clave, presencia digital, tecnología.
+3. Hallazgos analíticos: inferencias con su cadena lógica y nivel de
+confianza.
+4. Hipótesis: estado final (reforzada / debilitada / refutada /
+indeterminada) con la evidencia que lo motivó.
+5. Cronología de eventos relevantes (si la base la sustenta).
+6. Contradicciones: resueltas (con justificación) y no resueltas.
+7. Limitaciones del informe: lagunas que permanecen, búsquedas con
+resultado negativo y cómo afectan a las conclusiones.
+8. Anexo de fuentes: las que sustentan cada sección.
+
+# PROHIBIDO
+- Presentar inferencias como hechos.
+- Afirmaciones sin referencia a la base de evidencias.
+- Resolver contradicciones silenciosamente.
+- Suavizar la incertidumbre: si algo no se sabe, el informe dice que
+no se sabe.
+- En MODO A, generar el informe final ni conclusiones "provisionales
+definitivas".
+
+# MODO: {A o B}
+
+# BASE DE EVIDENCIAS
+[pegar aquí la base de evidencias]`;
+
 export const blogPosts: BlogPost[] = [
   {
     slug: "cuando-dos-ia-disenan-estrategia",
@@ -580,6 +734,113 @@ export const blogPosts: BlogPost[] = [
               one hour of work. The automation saves roughly 4 hours a
               month — about 300 euros in company cost.
             </p>
+          </>
+        ),
+      },
+    },
+  },
+  {
+    slug: "osint-con-llm-investigador-analista",
+    date: "2026-10-20",
+    category: { es: "Inteligencia", en: "Intelligence" },
+    content: {
+      es: {
+        title: "OSINT con LLM: el patrón investigador → analista (con los prompts completos)",
+        excerpt:
+          "Pedirle a un modelo un informe OSINT en una sola llamada da textos convincentes pero no verificables. Separar investigación y razonamiento en dos agentes lo soluciona.",
+        body: (
+          <>
+            <p>Pedirle a un modelo de lenguaje &quot;hazme un informe OSINT sobre esta empresa&quot; en una sola llamada es el método adecuado para obtener un texto convincente, bien redactado y posiblemente falso en puntos que no podrás detectar. El problema no es el modelo: es la arquitectura. Le estás pidiendo que haga dos trabajos incompatibles a la vez (recopilar evidencia verificable y razonar sobre ella) sin que ninguno de los dos quede trazado.</p>
+            <p>Después de algún fracaso, he dado con una estructura que resuelve esto separando los dos roles en dos agentes: uno que solo investiga y documenta, y otro que solo razona sobre lo documentado. Como agente &quot;Research&quot; estoy usando Atria Dawn y como agente &quot;Reasoning&quot; Opus 5.5, ambos son los mejores según los rankings de llm-stats. En este artículo comparto el proceso completo y los dos prompts tal como los uso, para que puedas ejecutarlo con cualquier modelo que tenga acceso a internet.</p>
+
+            <h2>La idea central: investigar primero, razonar después</h2>
+            <p>Para un informe OSINT basado en fuentes de internet, la capacidad más valorada en un LLM es el &quot;Research&quot; bien hecho: encontrar fuentes, consultarlas de verdad, rastrear la original y aportar referencias verificables. El &quot;Reasoning&quot; es lo segundo: convertir lo encontrado en análisis sólido.</p>
+            <p>Un modelo que razona muy bien pero busca mal produce explicaciones elegantes sobre premisas falsas. Uno que busca bien pero razona poco produce una lista de enlaces, no inteligencia. Por eso el pipeline separa ambas funciones:</p>
+            <p><strong>“Research” → Análisis preliminar → Detección de lagunas → “Research” dirigido → Informe final</strong></p>
+            <p>El punto crítico del diseño no son los modelos, sino el artefacto intermedio: lo que el primer agente le entrega al segundo no debe ser una narrativa pulida, sino una base de evidencias estructurada. Una narrativa bonita &quot;contrabandea&quot; supuestos que el analista heredará como si fueran hechos, y no tendrá forma de detectarlo.</p>
+
+            <h2>Fase 1: el agente de recolección</h2>
+            <p>Este es el prompt completo del agente “Research”:</p>
+            <pre><code>{osintPromptResearch}</code></pre>
+            <p>Tres decisiones de diseño que vale la pena entender:</p>
+            <ul>
+              <li><strong>La sección PROHIBIDO no es opcional.</strong> Los LLM tienden a derivar hacia el análisis porque es el patrón dominante de su entrenamiento. Sin prohibición explícita, el agente &quot;mejorará&quot; el entregable con interpretaciones que la fase siguiente heredará como hechos.</li>
+              <li><strong>Las secciones 8 y 9 son las de mayor valor.</strong> Cualquier búsqueda superficial produce las secciones 1 a 6. Lo que distingue una base de evidencias útil es que documente qué se contradice y qué falta: eso es exactamente lo que el analista necesita para generar hipótesis y órdenes de búsqueda dirigida.</li>
+              <li><strong>Rellena los identificadores conocidos.</strong> Si partes solo del nombre comercial, la primera tarea del agente es resolución de identidad (homónimos, filiales, marcas vs. sociedades). Con CIF o dominio evitas el error más común de todo el pipeline: investigar a la empresa equivocada.</li>
+            </ul>
+
+            <h2>Fase 2: el “Research” dirigido</h2>
+            <p>Aquí está el secreto del proceso: el análisis no es el final, es el motor de una segunda investigación. El agente analista no devuelve &quot;falta información sobre X&quot;, sino órdenes de búsqueda estructuradas con pregunta concreta, por qué importa, qué fuente la resolvería y qué ya se intentó. Una orden sin &quot;por qué importa&quot; se rechaza: cada búsqueda debe estar justificada por una conclusión pendiente.</p>
+            <p>El trabajo dirigido es de cuatro tipos, en orden de prioridad:</p>
+            <ol>
+              <li><strong>Resolver contradicciones abiertas.</strong> No buscar más instancias del mismo dato, sino la fuente que puede dirimir. Si el registro dice 50 empleados y LinkedIn 200, la pregunta no es &quot;¿cuántos empleados tiene?&quot; sino &quot;¿cuál de estas fuentes es más reciente y de mayor rango?&quot;. En España, el BORME y el Registro Mercantil dirimen la mayoría de estas disputas.</li>
+              <li><strong>Cerrar lagunas priorizadas.</strong> Solo las que bloquean una conclusión, no todas.</li>
+              <li><strong>Falsear hipótesis.</strong> Por cada hipótesis (&quot;la empresa parece estar contrayéndose&quot;), buscar activamente evidencia en contra: ofertas de empleo activas, nuevas sedes, lanzamientos…</li>
+              <li><strong>Tirar de los hilos.</strong> Búsqueda cruzada: persona → otras sociedades, dirección → otras empresas en el mismo domicilio, dominio → otros dominios del titular.</li>
+            </ol>
+            <p>Reglas específicas de esta fase: documentar las búsquedas negativas (&quot;no constan sanciones en las fuentes consultadas&quot; es un hallazgo válido), presupuesto de esfuerzo por pregunta (si tras varios intentos bien elegidos no aparece, la laguna se declara inaccesible y se sigue adelante), y entregar como salida una actualización de la base original: un merge, no un documento nuevo.</p>
+            <p>Criterio de parada: el ciclo se cierra cuando las preguntas restantes no afectan a ninguna conclusión, o cuando las búsquedas empiezan a devolver siempre las mismas fuentes. En la práctica, una o dos vueltas bien ejecutadas agotan el valor.</p>
+
+            <h2>Fase 3: el agente analista</h2>
+            <p>Este prompt tiene dos modos: en MODO A produce el análisis preliminar y las órdenes de “Research” dirigido; en MODO B, con la base actualizada, genera el informe final:</p>
+            <pre><code>{osintPromptAnalista}</code></pre>
+
+            <h2>Cómo se ejecuta en la práctica</h2>
+            <p>La primera pasada con MODO: A y la base original. Sus órdenes de “Research” se las pasas al primer prompt como instrucción específica. Cuando vuelve la base actualizada, segunda pasada con MODO: B y la base completa, no solo el delta, para que razone con todo el contexto.</p>
+            <p>Dos advertencias de uso. La regla 1 es la que más se viola: los modelos &quot;saben&quot; cosas sobre empresas y tienden a mezclar ese conocimiento con la evidencia. Si aparece un dato que no está en la base, no lo edites a mano: devuélveselo señalando el punto exacto y pide la corrección, porque así detectas si el fallo es sistémico. Y la sección de limitaciones es importante: si el informe final llega sin limitaciones sustantivas, cuidado. O el modelo las ha ocultado o la base de evidencias era pobre y no se registró.</p>
+
+            <h2>Cómo validar el resultado</h2>
+            <p>Una regla práctica para auditar cualquier informe producido así: toma el informe final, borra las conclusiones e intenta reconstruirlas únicamente con la base de evidencias. Si no puedes, el problema está en la recolección, no en el razonamiento, así ya sabes dónde invertir la siguiente iteración.</p>
+          </>
+        ),
+      },
+      en: {
+        title: "OSINT with LLMs: the researcher → analyst pattern (with the full prompts)",
+        excerpt:
+          "Asking a model for an OSINT report in a single call gives convincing but unverifiable text. Splitting research and reasoning across two agents fixes it.",
+        body: (
+          <>
+            <p>Asking a language model for &quot;an OSINT report on this company&quot; in a single call gives you a convincing, well-written text that may be false in places you cannot detect. The problem is not the model, it is the architecture: you are asking it to do two incompatible jobs at once (collect verifiable evidence and reason about it) without either one being traceable.</p>
+            <p>After some failures, I found a structure that solves this by splitting the two roles across two agents: one that only researches and documents, and one that only reasons about what was documented. I use Atria Dawn as the &quot;Research&quot; agent and Opus 5.5 as the &quot;Reasoning&quot; agent; both rank at the top of the llm-stats leaderboards. This article shares the full process and both prompts exactly as I use them, so you can run it with any model that has internet access.</p>
+
+            <h2>The core idea: research first, reason later</h2>
+            <p>For an OSINT report based on internet sources, the most valuable capability in an LLM is good research: finding sources, actually consulting them, tracing the original and providing verifiable references. Reasoning comes second: turning what was found into solid analysis.</p>
+            <p>A model that reasons very well but searches badly produces elegant explanations built on false premises. One that searches well but reasons little produces a list of links, not intelligence. That is why the pipeline separates both functions:</p>
+            <p><strong>“Research” → Preliminary analysis → Gap detection → Targeted “Research” → Final report</strong></p>
+            <p>The critical design point is not the models but the intermediate artifact: what the first agent hands to the second must not be a polished narrative, but a structured evidence base. A nice narrative smuggles in assumptions that the analyst will inherit as if they were facts, with no way to detect it.</p>
+
+            <h2>Phase 1: the collection agent</h2>
+            <p>This is the full prompt for the “Research” agent (kept in Spanish, as I use it):</p>
+            <pre><code>{osintPromptResearch}</code></pre>
+            <p>Three design decisions worth understanding:</p>
+            <ul>
+              <li><strong>The PROHIBIDO section is not optional.</strong> LLMs drift toward analysis because it is the dominant pattern in their training. Without an explicit prohibition, the agent will &quot;improve&quot; the deliverable with interpretations the next phase will inherit as facts.</li>
+              <li><strong>Sections 8 and 9 are the most valuable.</strong> Any shallow search produces sections 1 to 6. What makes an evidence base useful is that it documents what contradicts and what is missing: exactly what the analyst needs to generate hypotheses and targeted search orders.</li>
+              <li><strong>Fill in the known identifiers.</strong> If you start only from the trade name, the agent's first task is identity resolution (namesakes, subsidiaries, brands vs. legal entities). With a tax ID or domain you avoid the most common error in the whole pipeline: researching the wrong company.</li>
+            </ul>
+
+            <h2>Phase 2: targeted “Research”</h2>
+            <p>Here is the secret of the process: analysis is not the end, it is the engine of a second round of research. The analyst agent does not return &quot;information is missing about X&quot;; it returns structured search orders with a concrete question, why it matters, which source would resolve it, and what has already been tried. An order without &quot;why it matters&quot; is rejected: every search must be justified by a pending conclusion.</p>
+            <p>Targeted work falls into four types, in priority order:</p>
+            <ol>
+              <li><strong>Resolve open contradictions.</strong> Do not look for more instances of the same data point, but for the source that can settle it. If the registry says 50 employees and LinkedIn says 200, the question is not &quot;how many employees does it have?&quot; but &quot;which of these sources is more recent and of higher rank?&quot;. In Spain, the BORME and the Commercial Registry settle most of these disputes.</li>
+              <li><strong>Close prioritised gaps.</strong> Only those that block a conclusion, not all of them.</li>
+              <li><strong>Try to falsify hypotheses.</strong> For each hypothesis (&quot;the company seems to be shrinking&quot;), actively look for counter-evidence: active job postings, new offices, launches…</li>
+              <li><strong>Pull the threads.</strong> Cross-searching: person → other companies, address → other companies at the same address, domain → other domains owned by the same holder.</li>
+            </ol>
+            <p>Specific rules for this phase: document negative searches (&quot;no sanctions found in the sources consulted&quot; is a valid finding), a budget of effort per question (if several well-chosen attempts turn up nothing, the gap is declared inaccessible and you move on), and as output an update of the original base: a merge, not a new document.</p>
+            <p>Stopping criterion: the cycle closes when the remaining questions affect no conclusion, or when searches keep returning the same sources. In practice, one or two well-run rounds exhaust the value.</p>
+
+            <h2>Phase 3: the analyst agent</h2>
+            <p>This prompt has two modes: in MODE A it produces the preliminary analysis and the targeted “Research” orders; in MODE B, with the updated base, it produces the final report:</p>
+            <pre><code>{osintPromptAnalista}</code></pre>
+
+            <h2>How it runs in practice</h2>
+            <p>The first pass uses MODE: A and the original base. Its “Research” orders are passed to the first prompt as a specific instruction. When the updated base comes back, a second pass uses MODE: B with the full base, not just the delta, so the model reasons with the complete context.</p>
+            <p>Two usage warnings. Rule 1 is the one most often broken: models &quot;know&quot; things about companies and tend to mix that knowledge with the evidence. If a fact appears that is not in the base, do not edit it by hand: send it back pointing to the exact spot and ask for a correction, because that shows whether the failure is systemic. And the limitations section matters: if the final report comes back with no substantive limitations, be careful. Either the model hid them or the evidence base was poor and nothing was recorded.</p>
+
+            <h2>How to validate the result</h2>
+            <p>A practical rule for auditing any report produced this way: take the final report, delete its conclusions and try to rebuild them using only the evidence base. If you cannot, the problem lies in collection, not reasoning, so you know where to invest the next iteration.</p>
           </>
         ),
       },
