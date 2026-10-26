@@ -846,6 +846,81 @@ export const blogPosts: BlogPost[] = [
       },
     },
   },
+  {
+    slug: "ia-automatizaciones-usarla-bien",
+    date: "2026-10-26",
+    category: { es: "Automatización", en: "Automation" },
+    content: {
+      es: {
+        title: "IA y automatizaciones: usarla es una cosa, usarla bien es otra",
+        excerpt:
+          "Un cliente quería que la IA generara un Excel cada día. La clave no es usarla más, sino saber en qué fase conviene retirarla.",
+        body: (
+          <>
+            <p><strong>Usar la IA es una cosa; usarla bien, otra totalmente distinta.</strong></p>
+            <p>Cita hoy con un cliente potencial. Una asesoría laboral, fiscal y algunas cosas más. Gestión y asesoramiento. La primera, IA terreno abonado, la segunda aún en barbecho (soy conservador y prudente). Primero escucho: &quot;…ya sabes, en este campo hay que tener cuidado con los datos de clientes y la ley de protección de datos…bla bla&quot;. Que ayer publicaran el enésimo hackeo de este mes, no ayuda mucho para hablar de una tecnología que el común de los mortales no entiende. &quot;A mí es que estas cosas me dan miedo, no sabes quién está detrás y no sabes a dónde van los datos&quot;. En este punto puedes empezar a desplegar tu arsenal de argumentos para ir endulzando el café amargo que te han servido, pero es mejor seguir escuchando y asintiendo. Pero en medio de la letanía, una luz entre tinieblas, emerge Claude en su versión pro. Presto atención y me pongo ya en modo francotirador.</p>
+            <p>Esta asesoría emplea la IA, ya es algo, y además el &quot;más despierto&quot; del equipo está configurando un &quot;no sé qué&quot; que recibe un Excel y hace otro muy rápido y como queremos. Perfecto, avisemos al crack y revisemos qué está haciendo dado que el propietario del negocio no está al tanto.</p>
+            <p>Después de una breve presentación, el más despierto me abre las puertas de Claude y me explica con detalle el proceso. Un proyecto, con su chat en el que ha ido iterando y preguntando y en el que va desentrañando a pasitos cómo debe quedar el producto final. La idea es que, como se repite continuamente y para todos los clientes, todos los empleados puedan usar este proyecto para generar el Excel sobre el que ya se tomarán las decisiones. Fin de la presentación. De momento no hay producto. Sólo una buena idea que seguramente desemboque, en el mejor de los casos, en un Excel que hasta pueda utilizarse. Menos mal que ese día Claude no estaba en modo ventas para ofrecerle un script en Python, un taxi dando vueltas por la M-30 hasta que te quedas sin dinero (o tokens).</p>
+            <p>Es el momento de preguntar de nuevo. ¿Cómo vas a utilizarlo en el día a día? Respuesta: &quot;le daré los datos y él me irá respondiendo cuando le pregunte y me dará ya mi Excel hecho&quot;. En este punto, puedes hundirte o armarte de valor para explicarle que su idea es acertada pero la manera de ejecutarla es un desastre. Me callo y mejor no hablo de la ventana de contexto, procesos deterministas, costes en tokens de repetir lo mismo mil veces, etc. En cambio, le alabo la intención, le explico que su conocimiento funcional es la base del éxito y que, sin darse cuenta, ya está elaborando un PDR y un prefuncional de algo que su empresa necesita y que le reportará un ahorro considerable en tiempo y en dinero a su jefe, que además es el propietario.</p>
+            <p>No es la primera vez que uno observa este patrón de uso de la IA en los negocios. Pero lo normal en las empresas pequeñas y medianas no es contar con personas que se han dedicado al desarrollo de software. Ni el más despierto de los usuarios será capaz de desplegar soluciones adecuadas, eficientes, escalables y confiables sin la ayuda de empresas o profesionales que traduzcan esas ideas en productos que permitan ofrecer una solución real a un problema de automatización planteado. O al menos, no de momento.</p>
+            <p>El fin de esta historia es feliz. Ojo, porque no necesariamente terminan así todas.</p>
+            <ul>
+              <li>El propietario se quedó muy tranquilo al saber que la IA, en este caso, sólo va a intervenir para crear un producto y que, dentro de este proceso, no la íbamos a usar más. Y más tranquilo aún quedó al conocer el bendito ahorro por no repetir sine die tantas veces la misma cosa. Además, y al trabajar en local, podíamos usar los datos del cliente para que el entregable final no requiriese de la intervención humana que pusiera la guinda al pastel.</li>
+              <li>El &quot;despierto&quot; quedó entusiasmado por los elogios a su idea y a su trabajo, y se ganó el puesto de usuario clave (de momento, en ese proceso de negocio).</li>
+            </ul>
+            <p>Y yo, en mi caso, salí satisfecho por no haber herido la sensibilidad de nadie y por haber conseguido, con paciencia y humildad, una primera prueba de fuego en un nuevo cliente.</p>
+            <p><em>Álvaro Guillén</em></p>
+
+            <h2>Resumen académico</h2>
+            <ol>
+              <li><strong>Distinguir el uso de la IA como producto y como herramienta de producción.</strong> Cuando el proceso es determinista, la inteligencia artificial resulta más valiosa como constructora de la automatización que como ejecutora recurrente. Generar una vez el código a partir de la descripción funcional y de ejemplos reales traslada el coste de IA de recurrente a puntual, mejora la reproducibilidad y reduce la exposición de datos personales, un aspecto crítico en el marco del RGPD.</li>
+              <li><strong>Tratar el prototipo como especificación.</strong> El proyecto en Claude, con su historial de iteraciones, es un documento de requisitos de facto: contiene los criterios de negocio ya validados. Su valor no está en reutilizarlo tal cual, sino en formalizarlo (entradas, reglas, salidas esperadas) y contrastarlo con casos reales mediante pruebas de regresión antes de sustituirlo.</li>
+              <li><strong>Acotar el piloto.</strong> Con un universo potencial de cientos de procesos, el piloto debe limitarse a un conjunto reducido (entre cinco y diez) seleccionado por frecuencia de ejecución, tiempo por ejecución y estabilidad del formato de entrada. Este enfoque permite que los patrones comunes emerjan de la práctica, en lugar de diseñarlos a priori, y evita la sobreingeniería.</li>
+              <li><strong>El piloto puede hacerse con una aplicación de escritorio en Python</strong> que sirva para hacer creer al cliente. Partido a partido, ya habrá tiempo de pensar en la escalabilidad.</li>
+              <li><strong>Gestionar el factor humano.</strong> Los usuarios que impulsan estas iniciativas poseen el conocimiento funcional más valioso. Reconocer su aportación y asignarles un papel formal (usuario clave, responsable funcional del proceso) no es solo cortesía: es una condición de éxito, porque son quienes validarán las reglas y sostendrán la adopción.</li>
+              <li><strong>Criterios de éxito del piloto.</strong> Un piloto bien planteado debería medirse por la concordancia con los resultados previos, el ahorro de tiempo por ejecución, el coste evitado frente al uso recurrente de IA y la facilidad con la que un segundo y un tercer proceso se incorporan al mismo esquema.</li>
+            </ol>
+            <p>En síntesis, usar la IA es sencillo; usarla bien consiste en saber en qué fase del ciclo aporta más valor y en qué fase conviene retirarla.</p>
+            <p><em>Sonnet 5 y Álvaro Guillén</em></p>
+          </>
+        ),
+      },
+      en: {
+        title: "AI and automation: using it is one thing, using it well is another",
+        excerpt:
+          "A client wanted AI to produce an Excel file every day. The key is not using it more, but knowing when to withdraw it.",
+        body: (
+          <>
+            <p><strong>Using AI is one thing; using it well is a completely different thing.</strong></p>
+            <p>Today I have a meeting with a prospective client: a labour and tax advisory firm, plus a few other services. Management and advisory. The first one, AI, is fertile ground; the second is still fallow (I am conservative and cautious). First I listen: &quot;…you know, in this field you have to be careful with client data and data protection law…blah blah&quot;. Having the umpteenth hack of the month published yesterday does not help when you are talking about a technology the average person does not understand. &quot;These things scare me, you don't know who is behind them and you don't know where the data goes.&quot; At this point you could start deploying your arsenal of arguments to sweeten the bitter coffee you have been served, but it is better to keep listening and nodding. Then, in the middle of the litany, a light in the darkness: Claude, in its pro version, emerges. I pay attention and switch straight into sniper mode.</p>
+            <p>This advisory firm already uses AI, which is something, and the &quot;sharpest&quot; person on the team is setting up a &quot;something&quot; that takes an Excel file and produces another one very quickly, exactly as we want. Perfect: let's tell the whiz kid and review what they are doing, since the business owner is not aware of it.</p>
+            <p>After a brief introduction, the sharpest person opens their Claude account for me and explains the process in detail. A project, with its chat in which they have been iterating and asking questions, gradually working out step by step what the final product should look like. The idea is that, since it repeats continuously and for every client, all employees can use this project to generate the Excel file on which decisions will then be made. End of the presentation. For now there is no product. Just a good idea that will probably end, in the best case, in an Excel file that might actually be usable. Thank goodness Claude was not in sales mode that day, or it would have offered them a Python script, a taxi driving round the M-30 until you run out of money (or tokens).</p>
+            <p>Time to ask again. How are you going to use it day to day? The answer: &quot;I'll give it the data, it will answer my questions as I ask them, and it will give me my Excel file ready made.&quot; At this point you can either sink or summon the courage to explain that the idea is sound but the way it is being executed is a disaster. I keep quiet and do not bring up the context window, deterministic processes, the token cost of repeating the same thing a thousand times, and so on. Instead, I praise the intention, explain that their functional knowledge is the foundation of success and that, without realising it, they are already drafting a PDR and a pre-functional spec for something the company needs, which will save its owner, who is also their boss, a considerable amount of time and money.</p>
+            <p>This is not the first time one has seen this pattern of AI use in businesses. But small and medium-sized companies do not usually have people who have worked in software development. Not even the sharpest user will be able to deploy solutions that are adequate, efficient, scalable and reliable without the help of companies or professionals who turn those ideas into products that provide a real solution to the automation problem at hand. Or at least, not yet.</p>
+            <p>This story has a happy ending. Mind you, not all of them end this way.</p>
+            <ul>
+              <li>The owner was very reassured to learn that AI, in this case, would only be involved in creating a product and that, within this process, we would not use it any further. And they were even more reassured to learn about the blessed savings from not repeating the same task over and over, ad infinitum. Moreover, since we were working locally, we could use the client's data so that the final deliverable would not require human intervention, which was the icing on the cake.</li>
+              <li>The &quot;sharp one&quot; was delighted by the praise for their idea and their work, and earned the role of key user (for now, in that business process).</li>
+            </ul>
+            <p>As for me, I left satisfied, having not hurt anyone's feelings and having achieved, with patience and humility, a first real test with a new client.</p>
+            <p><em>Álvaro Guillén</em></p>
+
+            <h2>Academic summary</h2>
+            <ol>
+              <li><strong>Distinguish between AI as a product and AI as a production tool.</strong> When the process is deterministic, artificial intelligence is more valuable as the builder of the automation than as its recurring executor. Generating the code once, from the functional description and real examples, shifts the AI cost from recurring to one-off, improves reproducibility and reduces the exposure of personal data, a critical concern under the GDPR.</li>
+              <li><strong>Treat the prototype as a specification.</strong> The project in Claude, with its history of iterations, is a de facto requirements document: it contains the business criteria already validated. Its value lies not in reusing it as it is, but in formalising it (inputs, rules, expected outputs) and checking it against real cases through regression tests before replacing it.</li>
+              <li><strong>Limit the pilot.</strong> With a potential universe of hundreds of processes, the pilot should be restricted to a small set (between five and ten) selected by frequency of execution, time per execution and stability of the input format. This approach lets common patterns emerge from practice, rather than designing them in advance, and avoids over-engineering.</li>
+              <li><strong>The pilot can be built as a Python desktop application</strong> that convinces the client. One step at a time: there will be time to think about scalability later.</li>
+              <li><strong>Manage the human factor.</strong> The users who drive these initiatives hold the most valuable functional knowledge. Recognising their contribution and giving them a formal role (key user, functional owner of the process) is not just courtesy: it is a condition for success, because they are the ones who will validate the rules and sustain adoption.</li>
+              <li><strong>Pilot success criteria.</strong> A well-designed pilot should be measured by its agreement with previous results, the time saved per execution, the cost avoided compared with recurring AI use, and how easily a second and third process can be added to the same scheme.</li>
+            </ol>
+            <p>In short, using AI is easy; using it well means knowing in which phase of the cycle it adds the most value and in which phase it should be withdrawn.</p>
+            <p><em>Sonnet 5 and Álvaro Guillén</em></p>
+          </>
+        ),
+      },
+    },
+  },
 ];
 
 export function getSortedBlogPosts(): BlogPost[] {
