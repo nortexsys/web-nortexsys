@@ -935,6 +935,10 @@ export const blogPosts: BlogPost[] = [
             <p>En este caso, el cliente descargaba en formato Excel, desde las páginas de sus dos bancos, seis extractos de diferentes cuentas bancarias. Tenía que introducirlos por bloques en su ERP, realizar una conciliación bancaria y finalmente traspasar esos movimientos a otro Excel con el que analizaba la situación de tesorería de las compañías.</p>
             <p>El trabajo interno de conciliación dentro del ERP será una fase II de la automatización. No obstante, la manipulación de datos, en la que el trabajo era sencillo pero lento, se realizó con éxito.</p>
             <p>El resultado: un ahorro de 30 minutos semanales y un producto que sólo requiere un clic para arrancarlo y procesar todos los datos.</p>
+            <img
+              src="/blog/automatizacion-excel-flujo.png"
+              alt="Flujo antes y después: entrada en la web, descarga de Excel, inserción en el ERP y Excel final frente a un doble clic en un ejecutable de Python"
+            />
             <p>Sin coste recurrente, sin errores futuros, otra solución más que implementamos que contribuye a unos procesos más eficientes en la empresa. En la nueva era de la IA, las personas deberían aportar valor en flujos de trabajo que realmente lo requiriesen y no en dónde un proceso ejecutado con Python trabaja mejor y más rápido.</p>
             <p>Nuestro siguiente paso será acceder vía API a las cuentas bancarias. Lo haremos como un proceso autoejecutable en las tareas programadas de Windows, un día a la semana. Con eso nos ahorraremos el tedio de entrar a los bancos y descargar los extractos. Los 45 segundos quedarán en 0.</p>
             <p>Lo curioso del asunto, y lo dejo como reflexión personal, es que no era necesaria la IA para realizar todo lo anterior. Hace ya muchos años que este proceso hubiera sido implementado con éxito en la empresa. La ventaja que nos trae la IA es precisamente el coste: donde antes se hubieran pagado más de 1.000 euros, esta automatización no costó más de 300.</p>
@@ -950,6 +954,10 @@ export const blogPosts: BlogPost[] = [
             <p>In this case, the client downloaded, in Excel format, six statements for different bank accounts from the websites of their two banks. They had to enter them in blocks into their ERP, carry out a bank reconciliation and finally transfer those movements to another Excel file they used to analyse the companies' cash position.</p>
             <p>The internal reconciliation work inside the ERP will be a phase II of the automation. Nevertheless, the data handling, where the work was simple but slow, was carried out successfully.</p>
             <p>The result: 30 minutes saved each week and a product that needs only one click to start and process all the data.</p>
+            <img
+              src="/blog/automatizacion-excel-flujo.png"
+              alt="Before and after flow: web login, Excel download, ERP insertion and final Excel versus a double-click on a Python executable"
+            />
             <p>No recurring cost, no future errors, one more solution that helps make the company's processes more efficient. In the new era of AI, people should add value in workflows that truly require it, not in places where a process run with Python works better and faster.</p>
             <p>Our next step will be to access the bank accounts via API. We will do it as a self-running process in Windows scheduled tasks, one day a week. That will spare us the tedium of logging into the banks and downloading the statements. The 45 seconds will drop to 0.</p>
             <p>The curious thing, and I leave it as a personal reflection, is that AI was not needed to do all of the above. This process could have been successfully implemented in the company many years ago. The advantage AI brings is precisely the cost: where more than 1,000 euros would have been paid before, this automation cost no more than 300.</p>
