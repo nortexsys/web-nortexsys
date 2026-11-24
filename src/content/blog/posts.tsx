@@ -955,8 +955,8 @@ export const blogPosts: BlogPost[] = [
             <p>The internal reconciliation work inside the ERP will be a phase II of the automation. Nevertheless, the data handling, where the work was simple but slow, was carried out successfully.</p>
             <p>The result: 30 minutes saved each week and a product that needs only one click to start and process all the data.</p>
             <img
-              src="/blog/automatizacion-excel-flujo.png"
-              alt="Before and after flow: web login, Excel download, ERP insertion and final Excel versus a double-click on a Python executable"
+              src="/blog/automatizacion-excel-flujo-en.png"
+              alt="Before and after flow: website login, Excel download, ERP insertion and final Excel versus a double-click on a Python executable"
             />
             <p>No recurring cost, no future errors, one more solution that helps make the company's processes more efficient. In the new era of AI, people should add value in workflows that truly require it, not in places where a process run with Python works better and faster.</p>
             <p>Our next step will be to access the bank accounts via API. We will do it as a self-running process in Windows scheduled tasks, one day a week. That will spare us the tedium of logging into the banks and downloading the statements. The 45 seconds will drop to 0.</p>
